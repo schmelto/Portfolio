@@ -25,7 +25,6 @@ h1 {
 
 .padding {
 	padding-top: 10vh;
-	padding-left: 10vw;
 }
 .carousel {
 	position: relative;
@@ -75,3 +74,49 @@ h1 {
 
 
 
+.highlight-red {
+	color: #EF5350; 
+  }
+  .highlight-orange {
+	color: rgba(253, 149, 90, 0.8);
+  }
+  .highlight-pink {
+	color: pink;
+  }
+
+  
+
+  
+  /* #typewriter {
+	font-size: 2em;
+	margin: 0;
+  } */
+  #typewriter:after {
+	content: "|";
+	animation: blink 500ms linear infinite alternate;
+  }
+  
+  @-webkit-keyframes blink {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @-moz-keyframes blink {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes blink {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
