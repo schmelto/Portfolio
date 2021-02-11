@@ -22,6 +22,10 @@ h1 {
  font-size: 9vh;
 }
 
+h2 {
+	font-size: 7vh;
+}
+
 .box{
     display:block;
     height:10rem;
