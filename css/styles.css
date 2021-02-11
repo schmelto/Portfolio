@@ -22,6 +22,14 @@ h1 {
  font-size: 9vh;
 }
 
+.box{
+    display:block;
+    height:10rem;
+    }
+
+	.text {
+		font-size: 2rem;
+	}
 
 .padding {
 	padding-top: 10vh;
@@ -81,7 +89,10 @@ h1 {
 	color: rgba(253, 149, 90, 0.8);
   }
   .highlight-pink {
-	color: pink;
+	color: blueviolet;
+  }
+  .highlight-blue {
+	color: blue;
   }
 
   
