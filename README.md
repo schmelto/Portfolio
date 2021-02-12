@@ -8,6 +8,7 @@ Portfolio can be found [here](https://schmelto.github.io/portfolio/).
 |--------|---------|
 | css    | style   |
 | js     | scripts |
+| assets | images  |
 
 
 
