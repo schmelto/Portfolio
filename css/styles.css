@@ -26,14 +26,9 @@ h2 {
 	font-size: 7vh;
 }
 
-.box{
-    display:block;
-    height:10rem;
-    }
 
-.text {
-	font-size: 4vh;
-}
+
+
 
 .padding {
 	padding-top: 10vh;
@@ -135,3 +130,71 @@ h2 {
 	  opacity: 1;
 	}
   }
+
+
+
+  .box{
+    display:block;
+    height:12rem;
+    }
+
+  .text {
+	font-size: 1rem;
+}
+
+
+
+  /* // Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) { 
+	.text {
+		font-size: 1rem;
+	}
+
+	.box{
+		display:block;
+		height:12rem;
+		}
+
+  }
+  
+  /* // Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+	.text {
+		font-size: 2rem;
+	}
+
+	.box{
+		display:block;
+		height:22rem;
+		}
+
+  }
+  
+  /* // Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+
+	.text {
+		font-size: 2rem;
+	}
+
+	.box{
+		display:block;
+		height:22rem;
+		}
+
+   }
+  
+  /* // Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
+
+	.text {
+		font-size: 2rem;
+	}
+
+	.box{
+		display:block;
+		height:22rem;
+		}
+
+   }
+
