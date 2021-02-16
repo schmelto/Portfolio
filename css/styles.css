@@ -26,54 +26,54 @@ h2 {
 	font-size: 7vh;
 }
 
-
-
-
-
 .padding {
 	padding-top: 10vh;
 }
+
+
 .carousel {
-	position: relative;
+	/* position: relative; */
 	width: 100%;
 	font-size: 9vh;
 	line-height: 10vh;
 	height: 10vh;
 	color: #fff;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 .carousel .pre {
 	position: absolute;
-	top: 0;
+	/* top: 0; */
 }
 .carousel .change_outer {
-	top: 0;
+	bottom: 0;
 	height: 10vh;
 	overflow: hidden;
 }
 .carousel .change_outer .change_inner {
-	position: relative;
+	/* position: relative; */
 	animation: rotate 8s ease-in-out infinite;
 }
-.carousel .change_outer .element {
+/* .carousel .change_outer .element {
 	display: block;
-	/* font-weight: 700; */
-}
+	font-weight: 700;
+} */
+
+
 @keyframes rotate {
 	0%, 20% {
 		transform: translateY(0);
    }
 	25%, 45% {
-		transform: translateY(-10vh);
+		transform: translateY(-11.7vh);
    }
 	50%, 70% {
-		transform: translateY(-20vh);
+		transform: translateY(-23.5vh);
    }
 	75%, 95% {
-		transform: translateY(-30vh);
+		transform: translateY(-35.2vh);
    }
 	100% {
-		transform: translateY(-40vh);
+		transform: translateY(-47vh);
    }
 }
 
