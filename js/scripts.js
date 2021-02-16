@@ -62,9 +62,6 @@ function setupTypewriter(t) {
         type: type
     };
 }
-
 var typer = document.getElementById('typewriter');
-
 typewriter = setupTypewriter(typewriter);
-
 typewriter.type();
