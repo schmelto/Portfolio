@@ -85,8 +85,7 @@
     <span class="highlight-blue">isCoding</span>: 'true',
     <span class="highlight-blue">drink</span>: ['Coffee',
             'Tea',
-            'Water'],
-}
+            'Water']}
 </pre>
 </div>
 </div>
@@ -103,6 +102,22 @@
             <div class="row" id="contact">
                 <div class="col">
                     <h2>Contact</h2>
+
+
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">E-Mail Subject</label>
+                          <input type="email" class="form-control" id="mailsubject" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Body</label>
+                          <textarea type="text" class="form-control" id="mailbody" placeholder="Content"></textarea>
+                          <small id="emailHelp" class="form-text text-muted">Share some thougts or something else.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="sendMail()">Submit</button>
+                    </form>
+
+
                 </div>
             </div>
 
@@ -119,6 +134,12 @@
                             <a href="https://github.com/schmelto"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
             
             </footer>
+
+
+            <button type="button" id="send" onclick="sendMail()">Submit</button>
+
+            <script></script>
+
 
 </div>
         <script src="js/scripts.js"></script>

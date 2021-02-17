@@ -65,3 +65,20 @@ function setupTypewriter(t) {
 var typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 typewriter.type();
+
+
+
+// $('#send').on('click', function(e) {
+//     e.preventDefault();
+//     subject = $('#subject').val();
+//     body = $('#body').val();
+//     window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
+//   });
+
+function sendMail() {
+
+      subject = document.getElementById('mailsubject').value;
+      body = document.getElementById('mailbody').value;
+      window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
+
+}
