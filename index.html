@@ -21,6 +21,10 @@
                 <div class="nav">
                         <a href="#">home </a>
                         <a style="padding-left: 1rem"href="#about">about </a>
+                        <!-- <a style="padding-left: 1rem"href="#projects">projects </a> -->
+                        <a style="padding-left: 1rem"href="#contact">contact </a>
+                        <a style="padding-left: 1rem"href="#socials">socials </a>
+
                 </div>
             </div>
         </nav>
@@ -29,9 +33,7 @@
 
             <!-- HOME -->
             <div class="row padding">
-                <div class="col">
-                    <h1>Hello.</h1>
-                </div>
+                <h1>Hello.</h1>
             </div>
             <div class="row">
                 <div class="col-md-auto">
@@ -62,11 +64,9 @@
 } </pre>
 </div>
 
-             <!-- ABOUT -->
-            <div class="row" id="about">
-                <div class="col">
-                    <h2>About</h2>
-                </div>
+            <!-- ABOUT -->
+            <div id="about" class="row">
+                <h2>About</h2>
             </div>
 
             <div class="row">
@@ -83,16 +83,77 @@
     <span class="highlight-blue">isCoding</span>: 'true',
     <span class="highlight-blue">drink</span>: ['Coffee',
             'Tea',
-            'Water'],
-}
+            'Water']}
 </pre>
 </div>
 </div>
 
 
-           
+            <!-- PROJECTS -->
+            <!-- <div id="projects" class="row">
+                <h2>Projects</h2>
+            </div> -->
 
-</div>
+            <!-- CONTACT -->
+                <div id="contact" class="row">
+                    <h2>Contact</h2>
+
+
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">E-Mail Subject</label>
+                          <input type="email" class="form-control" id="mailsubject" aria-describedby="emailHelp" placeholder="Subject">
+                        </div>
+                        <div class="form-group" style="padding-top: 1rem;">
+                          <label for="exampleInputPassword1">E-Mail Content</label>
+                          <textarea type="text" class="form-control" id="mailbody" placeholder="Content"></textarea>
+                          <small id="emailHelp" class="form-text text-muted">Share some thougts or something else.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary float-end" onclick="sendMail()">Submit</button>
+                    </form>
+
+
+                </div>
+
+                <div id="socials" class="row">
+                    <h2>Socials</h2>
+                    <div class="col-6 col-md-4">
+                        <a href="https://www.linkedin.com/in/tomschmelzer/"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> 
+                
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="https://dev.to/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white"></a>
+                
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="https://people.sap.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=white"></a>
+                
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="https://www.instagram.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+               
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="https://twitter.com/schmelto2"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
+               
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="https://github.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+            
+                    </div>
+
+              
+                </div>
+
+                <footer class="footer">
+                    &copy; 2021 schmelto
+                </footer>
+
+            </div>
+
+
+
+        </div>
         <script src="js/scripts.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
