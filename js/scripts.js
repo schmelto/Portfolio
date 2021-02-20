@@ -82,3 +82,7 @@ function sendMail() {
       window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
 
 }
+
+
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
