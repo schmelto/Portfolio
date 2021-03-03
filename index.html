@@ -15,7 +15,9 @@
     <body>
 
         <nav class="navbar fixed-top">
+
             <div class="container">
+
                 <a class="navbar-brand" href="#"></a>
 
                 <div class="nav">
@@ -23,17 +25,18 @@
                         <a style="padding-left: 1rem"href="#about">about </a>
                         <a style="padding-left: 1rem"href="#projects">projects </a>
                         <a style="padding-left: 1rem"href="#contact">contact </a>
-
                 </div>
+
             </div>
         </nav>
 
         <div class="container">
 
-            <!-- HOME -->
+
             <div class="row padding">
                 <h1>Hello.</h1>
             </div>
+
             <div class="row">
                 <div class="col-md-auto">
                     <h1>I am</h1>
@@ -52,7 +55,8 @@
                 </div>
             </div> 
 
-<div class="box">
+            <div class="box">
+
 <pre id="typewriter" class="text">
 <span class="highlight-red">const</span> name = 'Tom';
 <span class="highlight-orange">Developer</span> dev = <span class="highlight-red">new</span> <span class="highlight-orange">Developer</span>(name);
@@ -61,9 +65,10 @@
     dev.<span class="highlight-pink">listenToMusic</span>();
     dev.<span class="highlight-pink">openStackOverFlow</span>();
 } </pre>
-</div>
 
-            <!-- ABOUT -->
+            </div>
+
+
             <div id="about" class="row">
                 <h2>About</h2>
             </div>
@@ -72,9 +77,10 @@
                 <div class="col-md">
                     <img style="height: 20rem" src="./assets/tom.png" class="img mx-auto d-block" alt="schmelto">
                 </div>
-                
+                    
 
-<div class="col-md d-flex justify-content-center">
+                <div class="col-md d-flex justify-content-center">
+
 <pre class="text">
 <span class="highlight-red">var</span> Developer = {
     <span class="highlight-blue">name</span>: 'Tom',
@@ -84,122 +90,110 @@
             'Tea',
             'Water']}
 </pre>
-</div>
-</div>
 
+                </div>
+            </div>
 
-            <!-- PROJECTS -->
             <div id="projects" class="row">
                 <h2>Projects</h2>
             </div>
+
             <div class="row">
+
                 <div class="col-12 col-md-6">
                     <a href="https://github.com/schmelto/100-days-of-code" target="_blank">
-                <div class="card bg-dark">
-                    <div class="card-body">
-                      <h5 class="card-title">100-days-of-code</h5>
-                      <p class="card-text white">My log for the #100DaysOfCodeChallange</p>
-                    </div>
-                  </div>
-                </a>
+                        <div class="card bg-dark">
+                            <div class="card-body">
+                            <h5 class="card-title">100-days-of-code</h5>
+                            <p class="card-text white">My log for the #100DaysOfCodeChallange</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-md-6">
                     <a href="https://github.com/schmelto/NewsApp" target="_blank">
-                    <div class="card bg-dark">
-                        <div class="card-body">
-                          <h5 class="card-title">NewsApp</h5>
-                          <p class="card-text white">NewsApp made with Ionic and Angular</p>
+                        <div class="card bg-dark">
+                            <div class="card-body">
+                            <h5 class="card-title">NewsApp</h5>
+                            <p class="card-text white">NewsApp made with Ionic and Angular</p>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                </a>
-                </div>
-
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <a href="https://github.com/schmelto/portfolio" target="_blank">
-                    <div class="card bg-dark">
-                        <div class="card-body">
-                        <h5 class="card-title">portfolio</h5>
-                        <p class="card-text white">Portfolio Website</p>
                         </div>
-                    </div>
                     </a>
                 </div>
-                <div class="col-12 col-md-6">
-                    <a href="https://github.com/schmelto/ImpactHackathon" target="_blank">
-                    <div class="card bg-dark">
-                        <div class="card-body">
-                          <h5 class="card-title">ImpactHackathon</h5>
-                          <p class="card-text white">Repository for the #ImpactHackathon 2020 of Campus Founders</p>
-                        </div>
-                      </div>
-                    </div>
-                </a>
-                </div>
-
-
-            <!-- CONTACT -->
-                <div id="contact" class="row">
-                    <h2>Contact</h2>
-
-
-                    <form>
-                        <div class="form-group ">
-                          <label>E-Mail Subject</label>
-                          <input type="input" class="form-control" id="mailsubject" aria-describedby="emailHelp" placeholder="Subject">
-                        </div>
-                        <div class="form-group" style="padding-top: 1rem;">
-                          <label>E-Mail Content</label>
-                          <textarea type="text" class="form-control" id="mailbody" placeholder="Content"></textarea>
-                          <small id="emailHelp" class="form-text text-muted">Share some thougts or something else.</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary float-end" onclick="sendMail()">Submit</button>
-                    </form>
-
-
-                </div>
-
-                <div class="row">
-                    
-                    <div class="col-6 col-md-4">
-                        <a href="https://www.linkedin.com/in/tomschmelzer/"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> 
-                
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="https://dev.to/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white"></a>
-                
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="https://people.sap.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=white"></a>
-                
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="https://www.instagram.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
-               
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="https://twitter.com/schmelto2"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
-               
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="https://github.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
-            
-                    </div>
-
-              
-                </div>
-
-                <footer class="footer">
-                    &copy; <span id="year"></span> schmelto
-                </footer>
 
             </div>
 
+            <div class="row">
 
+                <div class="col-12 col-md-6">
+                    <a href="https://github.com/schmelto/portfolio" target="_blank">
+                        <div class="card bg-dark">
+                            <div class="card-body">
+                            <h5 class="card-title">portfolio</h5>
+                            <p class="card-text white">Portfolio Website</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <a href="https://github.com/schmelto/ImpactHackathon" target="_blank">
+                        <div class="card bg-dark">
+                            <div class="card-body">
+                            <h5 class="card-title">ImpactHackathon</h5>
+                            <p class="card-text white">Repository for the #ImpactHackathon 2020 of Campus Founders</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div id="contact" class="row">
+                <h2>Contact</h2>
+                <form>
+                    <div class="form-group ">
+                        <label>E-Mail Subject</label>
+                        <input type="input" class="form-control" id="mailsubject" aria-describedby="emailHelp" placeholder="Subject">
+                    </div>
+                    <div class="form-group" style="padding-top: 1rem;">
+                        <label>E-Mail Content</label>
+                        <textarea type="text" class="form-control" id="mailbody" placeholder="Content"></textarea>
+                        <small id="emailHelp" class="form-text text-muted">Share some thougts or something else.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary float-end" onclick="sendMail()">Submit</button>
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <a href="https://www.linkedin.com/in/tomschmelzer/"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> 
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="https://dev.to/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white"></a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="https://people.sap.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/SAP-0FAAFF?style=for-the-badge&logo=sap&logoColor=white"></a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="https://www.instagram.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="https://twitter.com/schmelto2"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="https://github.com/schmelto"><img class="img mx-auto d-block socials" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                &copy; <span id="year"></span> schmelto
+            </footer>
 
         </div>
+
         <script src="js/scripts.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
