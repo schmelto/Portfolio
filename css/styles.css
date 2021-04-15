@@ -25,6 +25,11 @@ a:hover
 	cursor:pointer;  
 }
 
+.nav-text {
+	padding-left: 1rem;
+	font-size: 18px;
+}
+
 .card {
 	margin-bottom: 1rem;
 }
@@ -35,6 +40,10 @@ a:hover
 
 .padding {
 	padding-top: 10vh;
+}
+
+.padding-top {
+	padding-top: 64px;
 }
 
 .footer {
