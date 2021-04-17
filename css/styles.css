@@ -320,3 +320,32 @@ a:hover
     left: 0;
     right: -55.8px;
 }
+
+
+
+.flex-col-2 {
+	width: 100%;
+    height: auto;
+    columns: 2;
+    /* column-gap:  10px;
+    margin-bottom: 12px; */
+}
+
+@media (max-width: 768px) {.flex-col-2 {
+	width: 100%;
+    height: auto;
+    columns: 1;
+    /* column-gap:  10px;
+    margin-bottom: 12px; */
+} }
+
+
+.flex-card {
+	width: 100%;
+    /* margin: 0 0 20px; */
+    overflow: hidden;
+    break-inside: avoid;
+    padding: 0;
+}
+
+
