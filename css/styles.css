@@ -1,8 +1,18 @@
 body {
-  background-color: #121212;
+  /* background-color: #121212; */
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  color: #fff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ef5350;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 h1 {
@@ -17,15 +27,8 @@ h3 {
   font-size: 2rem;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ef5350;
-  text-decoration: none;
-  cursor: pointer;
+.navbar {
+  background-color: #f8f9fa;
 }
 
 .navbar-nav {
@@ -56,10 +59,7 @@ a.nav-link:hover {
 
 .card {
   margin-bottom: 1rem;
-}
-
-.white {
-  color: white;
+  background-color: #f8f9fa;
 }
 
 .padding {
@@ -108,7 +108,6 @@ a.nav-link:hover {
   font-size: 4.5rem;
   line-height: 5rem;
   height: 5rem;
-  color: #fff;
 }
 .carousel .pre {
   position: absolute;
@@ -259,7 +258,7 @@ a.nav-link:hover {
 }
 
 .timeline .event {
-  border-bottom: 1px dashed #e8ebf1;
+  border-bottom: 1px solid #e8ebf1;
   padding-bottom: 25px;
   margin-bottom: 25px;
   position: relative;
@@ -304,7 +303,7 @@ a.nav-link:hover {
   -webkit-box-shadow: 0 0 0 3px #ef5350;
   box-shadow: 0 0 0 3px #ef5350;
   left: -55.8px;
-  background: #121212;
+  background: white;
   border-radius: 50%;
   height: 9px;
   width: 9px;
@@ -362,4 +361,32 @@ a.nav-link:hover {
   overflow: hidden;
   break-inside: avoid;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+  }
+  .navbar {
+    background-color: #343a40;
+  }
+
+  .timeline .event:after {
+    background: #121212;
+  }
+
+  .card {
+    background-color: #343a40;
+  }
+
+  .navbar-toggler {
+    color: rgba(255,255,255,.55);
+    border-color: rgba(255,255,255,.1);
+  }
+  
 }
