@@ -44,6 +44,16 @@ a.nav-link:hover {
 	cursor: pointer;
 }
 
+.padding-on-md {
+	padding-top: 0;
+}
+
+@media (max-width: 992px) {
+	.padding-on-md {
+		padding-top: 1rem;
+	}
+  }
+
 .card {
   margin-bottom: 1rem;
 }
@@ -53,7 +63,7 @@ a.nav-link:hover {
 }
 
 .padding {
-  padding-top: 10vh;
+  padding-top: 5rem;
 }
 
 .padding-top {
@@ -97,7 +107,7 @@ a.nav-link:hover {
   width: 100%;
   font-size: 4.5rem;
   line-height: 5rem;
-  height: 10vh;
+  height: 5rem;
   color: #fff;
 }
 .carousel .pre {
