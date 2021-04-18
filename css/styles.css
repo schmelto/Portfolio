@@ -6,15 +6,15 @@ body {
 }
 
 h1 {
-	font-size: 9vh;
+	font-size: 4.5rem;
 }
 
 h2 {
-	font-size: 7vh;
+	font-size: 3.5rem;
 }
 
 h3 {
-	font-size: 4vh;
+	font-size: 2rem;
 }
 
 a {
@@ -86,8 +86,8 @@ a:hover
 
 .carousel {
 	width: 100%;
-	font-size: 9vh;
-	line-height: 10vh;
+	font-size: 4.5rem;
+	line-height: 5rem;
 	height: 10vh;
 	color: #fff;
 }
@@ -96,7 +96,7 @@ a:hover
 }
 .carousel .change_outer {
 	bottom: 0;
-	height: 10vh;
+	height: 5rem;
 	overflow: hidden;
 }
 .carousel .change_outer .change_inner {
@@ -113,16 +113,16 @@ a:hover
 		transform: translateY(0);
    }
 	25%, 45% {
-		transform: translateY(-11.7vh);
+		transform: translateY(-5.85rem);
    }
 	50%, 70% {
-		transform: translateY(-23.5vh);
+		transform: translateY(-11.75rem);
    }
 	75%, 95% {
-		transform: translateY(-35.2vh);
+		transform: translateY(-17.6rem);
    }
 	100% {
-		transform: translateY(-47vh);
+		transform: translateY(-23.5rem);
    }
 }
 
