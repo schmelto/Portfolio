@@ -363,3 +363,8 @@ a.nav-link:hover {
   break-inside: avoid;
   padding: 0;
 }
+
+
+#contact {
+  margin-bottom: 32px;
+}
