@@ -363,3 +363,8 @@ a.nav-link:hover {
   break-inside: avoid;
   padding: 0;
 }
+
+
+.progress {
+  margin-bottom: 1rem;
+}
