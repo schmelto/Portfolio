@@ -74,4 +74,5 @@ function sendMail() {
 
 }
 
-document.getElementById("year").innerHTML = new Date().getFullYear();
+// get boolean for dark mode
+// const useDark = window.matchMedia("(prefers-color-scheme: dark)");
