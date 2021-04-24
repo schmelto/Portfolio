@@ -74,5 +74,18 @@ function sendMail() {
 
 }
 
+function detectColorScheme(){
+var navbar = document.getElementById("navbar");
 // get boolean for dark mode
-// const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+console.log(useDark);
+if (useDark.matches === true) {
+    navbar.classList.remove("navbar-light");
+    navbar.classList.add("navbar-dark");
+    console.log("dark")
+} else {
+    navbar.classList.add("navbar-light");
+    navbar.classList.remove("navbar-dark");
+    console.log("light")
+}}
+detectColorScheme();
