@@ -41,20 +41,20 @@ h3 {
 }
 
 a.nav-link:hover {
-	color: #ef5350 !important;
-	text-decoration: none;
-	cursor: pointer;
+  color: #ef5350 !important;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .padding-on-md {
-	padding-top: 0;
+  padding-top: 0;
 }
 
 @media (max-width: 992px) {
-	.padding-on-md {
-		padding-top: 1rem;
-	}
+  .padding-on-md {
+    padding-top: 1rem;
   }
+}
 
 .card {
   margin-bottom: 1rem;
@@ -385,18 +385,11 @@ a.nav-link:hover {
   }
 
   .navbar-toggler {
-    color: rgba(255,255,255,.55);
-    border-color: rgba(255,255,255,.1);
+    color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(255, 255, 255, 0.1);
   }
-  
 }
 
 #contact {
   margin-bottom: 32px;
 }
-
-
-.progress {
-  margin-bottom: 1rem;
-}
-
