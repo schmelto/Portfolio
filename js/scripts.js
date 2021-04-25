@@ -74,7 +74,6 @@ function sendMail() {
 
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkModeMediaQuery.addEventListener("change", (e) => {
-    const darkModeOn = e.matches;
     setColorSheme();
 });
 
