@@ -1,91 +1,91 @@
 function setupTypewriter(t) {
-    var HTML = t.innerHTML;
+	var HTML = t.innerHTML;
 
-    t.innerHTML = "";
+	t.innerHTML = "";
 
-    var cursorPosition = 0,
-        tag = "",
-        writingTag = false,
-        tagOpen = false,
-        typeSpeed = 100,
-    tempTypeSpeed = 0;
+	var cursorPosition = 0,
+		tag = "",
+		writingTag = false,
+		tagOpen = false,
+		typeSpeed = 100,
+	tempTypeSpeed = 0;
 
-    var type = function() {
-    
-        if (writingTag === true) {
-            tag += HTML[cursorPosition];
-        }
+	var type = function() {
+	
+		if (writingTag === true) {
+			tag += HTML[cursorPosition];
+		}
 
-        if (HTML[cursorPosition] === "<") {
-            tempTypeSpeed = 0;
-            if (tagOpen) {
-                tagOpen = false;
-                writingTag = true;
-            } else {
-                tag = "";
-                tagOpen = true;
-                writingTag = true;
-                tag += HTML[cursorPosition];
-            }
-        }
-        if (!writingTag && tagOpen) {
-            tag.innerHTML += HTML[cursorPosition];
-        }
-        if (!writingTag && !tagOpen) {
-            if (HTML[cursorPosition] === " ") {
-                tempTypeSpeed = 0;
-            }
-            else {
-                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-            }
-            t.innerHTML += HTML[cursorPosition];
-        }
-        if (writingTag === true && HTML[cursorPosition] === ">") {
-            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-            writingTag = false;
-            if (tagOpen) {
-                var newSpan = document.createElement("span");
-                t.appendChild(newSpan);
-                newSpan.innerHTML = tag;
-                tag = newSpan.firstChild;
-            }
-        }
+		if (HTML[cursorPosition] === "<") {
+			tempTypeSpeed = 0;
+			if (tagOpen) {
+				tagOpen = false;
+				writingTag = true;
+			} else {
+				tag = "";
+				tagOpen = true;
+				writingTag = true;
+				tag += HTML[cursorPosition];
+			}
+		}
+		if (!writingTag && tagOpen) {
+			tag.innerHTML += HTML[cursorPosition];
+		}
+		if (!writingTag && !tagOpen) {
+			if (HTML[cursorPosition] === " ") {
+				tempTypeSpeed = 0;
+			}
+			else {
+				tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+			}
+			t.innerHTML += HTML[cursorPosition];
+		}
+		if (writingTag === true && HTML[cursorPosition] === ">") {
+			tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+			writingTag = false;
+			if (tagOpen) {
+				var newSpan = document.createElement("span");
+				t.appendChild(newSpan);
+				newSpan.innerHTML = tag;
+				tag = newSpan.firstChild;
+			}
+		}
 
-        cursorPosition += 1;
-        if (cursorPosition < HTML.length - 1) {
-            setTimeout(type, tempTypeSpeed);
-        }
+		cursorPosition += 1;
+		if (cursorPosition < HTML.length - 1) {
+			setTimeout(type, tempTypeSpeed);
+		}
 
-    };
+	};
 
-    return {
-        type: type
-    };
+	return {
+		type: type
+	};
 }
 var typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 typewriter.type();
 
 function sendMail() {
-      subject = document.getElementById('mailsubject').value;
-      body = document.getElementById('mailbody').value;
-      window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
+	  subject = document.getElementById('mailsubject').value;
+	  body = document.getElementById('mailbody').value;
+	  window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
 }
 
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    darkModeMediaQuery.addEventListener("change", (e) => {
-    setColorSheme();
+	darkModeMediaQuery.addEventListener("change", () => {
+	setColorSheme();
 });
 
 function setColorSheme(){
-    var navbar = document.getElementById("navbar");
-    const useDark = window.matchMedia("(prefers-color-scheme: dark)");
-    if (useDark.matches === true) {
-        navbar.classList.remove("navbar-light");
-        navbar.classList.add("navbar-dark");
-    } else {
-        navbar.classList.add("navbar-light");
-        navbar.classList.remove("navbar-dark");
-    }
+	var navbar = document.getElementById("navbar");
+	const useDark = window.matchMedia("(prefers-color-scheme: dark)");
+	if (useDark.matches === true) {
+		navbar.classList.remove("navbar-light");
+		navbar.classList.add("navbar-dark");
+	} else {
+		navbar.classList.add("navbar-light");
+		navbar.classList.remove("navbar-dark");
+	}
 }
 setColorSheme();
