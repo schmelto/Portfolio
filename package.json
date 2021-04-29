@@ -2,6 +2,7 @@
   "version": "0.3.0",
   "devDependencies": {
     "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
     "prettier": "2.2.1"
   }
 }
