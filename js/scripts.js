@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-/* eslint-disable require-jsdoc */
+/* eslint-disable no-unused-vars */
 function setupTypewriter(t) {
   const HTML = t.innerHTML;
 
@@ -12,7 +11,7 @@ function setupTypewriter(t) {
   const typeSpeed = 100;
   let tempTypeSpeed = 0;
 
-  const type = function() {
+  const type = function () {
     if (writingTag === true) {
       tag += HTML[cursorPosition];
     }
@@ -61,14 +60,13 @@ function setupTypewriter(t) {
     type: type,
   };
 }
-// const typer = document.getElementById('typewriter');
-typewriter = setupTypewriter(typewriter);
+const typer = document.getElementById('typewriter');
+let typewriter = setupTypewriter(typewriter);
 typewriter.type();
 
-// eslint-disable-next-line no-unused-vars
 function sendMail() {
-  subject = document.getElementById('mailsubject').value;
-  body = document.getElementById('mailbody').value;
+  let subject = document.getElementById('mailsubject').value;
+  let body = document.getElementById('mailbody').value;
   window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
 }
 

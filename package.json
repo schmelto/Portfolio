@@ -1,8 +1,34 @@
 {
-  "version": "0.5.1",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio can be found [here](https://schmelto.github.io/portfolio/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schmelto/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schmelto/portfolio/issues"
+  },
+  "homepage": "https://github.com/schmelto/portfolio#readme",
   "devDependencies": {
-    "eslint": "^7.25.0",
-    "eslint-config-google": "^0.14.0",
-    "prettier": "2.2.1"
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "eslint": "^7.2.0"
   }
 }
