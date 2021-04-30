@@ -11,7 +11,7 @@ function setupTypewriter(t) {
   const typeSpeed = 100;
   let tempTypeSpeed = 0;
 
-  const type = function() {
+  const type = function () {
     if (writingTag === true) {
       tag += HTML[cursorPosition];
     }
