@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable require-jsdoc */
 function setupTypewriter(t) {
   const HTML = t.innerHTML;
 
@@ -61,11 +59,10 @@ function setupTypewriter(t) {
     type: type,
   };
 }
-// const typer = document.getElementById('typewriter');
+const typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 typewriter.type();
 
-// eslint-disable-next-line no-unused-vars
 function sendMail() {
   subject = document.getElementById('mailsubject').value;
   body = document.getElementById('mailbody').value;
