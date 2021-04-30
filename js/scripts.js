@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function setupTypewriter(t) {
   const HTML = t.innerHTML;
 
@@ -60,12 +61,12 @@ function setupTypewriter(t) {
   };
 }
 const typer = document.getElementById('typewriter');
-typewriter = setupTypewriter(typewriter);
+let typewriter = setupTypewriter(typewriter);
 typewriter.type();
 
 function sendMail() {
-  subject = document.getElementById('mailsubject').value;
-  body = document.getElementById('mailbody').value;
+  let subject = document.getElementById('mailsubject').value;
+  let body = document.getElementById('mailbody').value;
   window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
 }
 
