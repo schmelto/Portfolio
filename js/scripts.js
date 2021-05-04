@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 function setupTypewriter(t) {
   const HTML = t.innerHTML;
-
   t.innerHTML = '';
-
   let cursorPosition = 0;
   let tag = '';
   let writingTag = false;
@@ -61,7 +59,9 @@ function setupTypewriter(t) {
   };
 }
 const typer = document.getElementById('typewriter');
-let typewriter = setupTypewriter(typewriter);
+// eslint-disable-next-line no-undef
+typewriter = setupTypewriter(typewriter);
+// eslint-disable-next-line no-undef
 typewriter.type();
 
 function sendMail() {
