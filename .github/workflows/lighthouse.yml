@@ -1,15 +1,29 @@
-name: Lighthouse CI
-on: push
+name: Test Lighthouse Check with Minimum Score Enforcement
+on:
+  push:
+  pull_request_target:
+  pull_request:
+    types: [opened, edited]
+
 jobs:
-  lighthouse:
+  lighthouse-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v7
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Lighthouse Check
+        uses: foo-software/lighthouse-check-action@v2.0.5
+        id: lighthouseCheck
         with:
-          urls: |
-            https://schmelto.github.io/portfolio/
-          budgetPath: ./budget.json # test performance budgets
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          urls: 'https://schmelto.github.io/portfolio/'
+
+      - name: Handle Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "70"
+          minBestPracticesScore: "70"
+          minPerformanceScore: "60"
+          minSeoScore: "70"
