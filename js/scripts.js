@@ -94,7 +94,7 @@ let githubprojects = [
   'schmelto/100-days-of-code',
   'schmelto/portfolio',
   'schmelto/NewsApp',
-  'schmelto/ImpactHackathon'
+  'schmelto/ImpactHackathon',
 ];
 
 githubprojects.forEach((project) => {
@@ -113,7 +113,7 @@ function getproject(project) {
 }
 
 function createprojectcard(project) {
-  project.description = project.description.replace(/:[^}]*:/,'');
+  project.description = project.description.replace(/:[^}]*:/, '');
   let projectcard = `<div class="flex-card">
        <a href="${project.html_url}" target="_blank" rel="noopener">
          <div class="card">
