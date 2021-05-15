@@ -15,7 +15,3 @@ GET https://api.github.com/repos/schmelto/ImpactHackathon
 ###
 
 GET https://api.github.com/users/schmelto
-
-###
-
-GET https://api.github.com/emojis/100
