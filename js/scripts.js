@@ -107,13 +107,17 @@ function getproject(project) {
       return response.json();
     })
     .then((project) => {
-      console.log(project);
+      // console.log(project);
       githubprojectsdomelement.innerHTML += createprojectcard(project);
     });
 }
 
 function createprojectcard(project) {
+  let emoji = project.description.match(/:([^)]+):/);
+  console.log(emoji[1]); 
   project.description = project.description.replace(/:[^}]*:/, '');
+
+  // console.log(emoji);
   let projectcard = `<div class="flex-card">
        <a href="${project.html_url}" target="_blank" rel="noopener">
          <div class="card">
