@@ -92,20 +92,20 @@ setColorSheme();
 var githubprojectsdomelement = document.getElementById('githubprojects');
 let githubprojects = [
   {
-    'name': 'schmelto/100-days-of-code',
-    'icon': 'description',
+    name: 'schmelto/100-days-of-code',
+    icon: 'description',
   },
   {
-    'name':'schmelto/NewsApp',
-    'icon': 'article',
+    name: 'schmelto/NewsApp',
+    icon: 'article',
   },
   {
-    'name': 'schmelto/portfolio',
-    'icon': 'person',
+    name: 'schmelto/portfolio',
+    icon: 'person',
   },
   {
-    'name': 'schmelto/ImpactHackathon',
-    'icon': 'home',
+    name: 'schmelto/ImpactHackathon',
+    icon: 'home',
   },
 ];
 
