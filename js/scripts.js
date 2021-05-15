@@ -87,3 +87,55 @@ function setColorSheme() {
   }
 }
 setColorSheme();
+
+// API
+var githubprojectsdomelement = document.getElementById('githubprojects');
+let githubprojects = [
+  {
+    name: 'schmelto/100-days-of-code',
+    icon: 'description',
+  },
+  {
+    name: 'schmelto/NewsApp',
+    icon: 'article',
+  },
+  {
+    name: 'schmelto/portfolio',
+    icon: 'person',
+  },
+  {
+    name: 'schmelto/ImpactHackathon',
+    icon: 'home',
+  },
+];
+
+githubprojects.forEach((project) => {
+  getproject(project.name, project.icon);
+});
+
+function getproject(project, icon) {
+  fetch(`https://api.github.com/repos/${project}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((project) => {
+      githubprojectsdomelement.innerHTML += createprojectcard(project, icon);
+    });
+}
+
+function createprojectcard(project, icon) {
+  project.description = project.description.replace(/:[^}]*:/, '');
+  let projectcard = `<div class="flex-card">
+       <a href="${project.html_url}" target="_blank" rel="noopener">
+         <div class="card">
+           <div class="card-body">
+             <h5 class="card-title"><span class="material-icons">
+                 ${icon}
+               </span> ${project.name}</h5>
+             <p class="card-text">${project.description}</p>
+           </div>
+         </div>
+       </a>
+     </div>`;
+  return projectcard;
+}
