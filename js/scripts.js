@@ -91,39 +91,46 @@ setColorSheme();
 // API
 var githubprojectsdomelement = document.getElementById('githubprojects');
 let githubprojects = [
-  'schmelto/100-days-of-code',
-  'schmelto/portfolio',
-  'schmelto/NewsApp',
-  'schmelto/ImpactHackathon',
+  {
+    "name": 'schmelto/100-days-of-code',
+    "icon": 'description'
+  },
+  {
+    "name": 'schmelto/NewsApp',
+    "icon": 'article'
+  },
+  {
+    "name": 'schmelto/portfolio',
+    "icon": 'person'
+  },
+  {
+    "name": 'schmelto/ImpactHackathon',
+    "icon": 'home'
+  },
 ];
 
 githubprojects.forEach((project) => {
-  getproject(project);
+  getproject(project.name, project.icon);
 });
 
-function getproject(project) {
+function getproject(project, icon) {
   fetch(`https://api.github.com/repos/${project}`)
     .then((response) => {
       return response.json();
     })
     .then((project) => {
-      // console.log(project);
-      githubprojectsdomelement.innerHTML += createprojectcard(project);
+      githubprojectsdomelement.innerHTML += createprojectcard(project, icon);
     });
 }
 
-function createprojectcard(project) {
-  let emoji = project.description.match(/:([^)]+):/);
-  console.log(emoji[1]); 
+function createprojectcard(project, icon) {
   project.description = project.description.replace(/:[^}]*:/, '');
-
-  // console.log(emoji);
   let projectcard = `<div class="flex-card">
        <a href="${project.html_url}" target="_blank" rel="noopener">
          <div class="card">
            <div class="card-body">
              <h5 class="card-title"><span class="material-icons">
-                 description
+                 ${icon}
                </span> ${project.name}</h5>
              <p class="card-text">${project.description}</p>
            </div>
