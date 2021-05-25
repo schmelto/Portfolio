@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.3.4
 
       - name: Run Lighthouse Check
-        uses: foo-software/lighthouse-check-action@v2.0.5
+        uses: foo-software/lighthouse-check-action@v3.0.0
         id: lighthouseCheck
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
