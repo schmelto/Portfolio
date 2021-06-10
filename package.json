@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Portfolio can be found [here](https://schmelto.github.io/portfolio/).",
   "main": "index.js",
   "scripts": {
