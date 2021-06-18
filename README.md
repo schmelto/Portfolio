@@ -7,3 +7,5 @@ The website can be found [here](https://schmelto.github.io/portfolio/).
 The Projects are accessed through the GitHub API.
 
 ![portfolio](./assets/portfolio.gif)
+
+This Project uses ESLint and Prettier.
