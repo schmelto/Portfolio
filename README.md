@@ -9,3 +9,5 @@ The Projects are accessed through the GitHub API.
 ![portfolio](./assets/portfolio.gif)
 
 This Project uses ESLint and Prettier.
+
+If you want, you can clone this project and adapt it to your own portfolio website. 
