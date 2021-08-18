@@ -2,7 +2,7 @@
 
 Custom Portfolio Website made in HTML, CSS and JavasScript.
 
-The website is deployed to GitHub Pages and can be found [here](https://schmelto.github.io/portfolio/).
+The website is deployed to GitHub Pages and can be found [here](https://schmelto.github.io/Portfolio/).
 
 The Projects are accessed through the GitHub API.
 
