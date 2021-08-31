@@ -2,7 +2,7 @@ name: screenshots ci actions
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   screenshots:
