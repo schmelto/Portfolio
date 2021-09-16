@@ -15,7 +15,7 @@ jobs:
         id: lighthouseCheck
         with:
           accessToken: ${{ secrets.GITHUB_TOKEN }}
-          urls: 'https://schmelto.github.io/portfolio/'
+          urls: 'https://schmelto.github.io/Portfolio/'
 
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
