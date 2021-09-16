@@ -2,8 +2,6 @@ name: Feature Request
 description: Suggest a feature
 title: "[Feat]: "
 labels: [enhancement]
-assignees:
-  - schmelto
 body:
   - type: markdown
     attributes:
