@@ -1,27 +1,23 @@
 name: Test Lighthouse Check with Minimum Score Enforcement
-on:
-  pull_request:
-    types: [opened, edited]
+on: [push]
 
 jobs:
   lighthouse-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.4
-
-      - name: Run Lighthouse Check
-        uses: foo-software/lighthouse-check-action@v4.0.0
+      - uses: actions/checkout@master
+      - run: npm install
+      - name: Run Lighthouse
+        uses: foo-software/lighthouse-check-action@master
         id: lighthouseCheck
         with:
-          accessToken: ${{ secrets.GITHUB_TOKEN }}
           urls: 'https://schmelto.github.io/Portfolio/'
-
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-          minAccessibilityScore: '70'
-          minBestPracticesScore: '70'
-          minPerformanceScore: '60'
-          minSeoScore: '70'
+          minAccessibilityScore: "90"
+          minBestPracticesScore: "50"
+          minPerformanceScore: "50"
+          minProgressiveWebAppScore: "50"
+          minSeoScore: "50"
