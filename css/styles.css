@@ -144,8 +144,6 @@ a.nav-link:hover {
   animation: blink 500ms linear infinite alternate;
 }
 
-
-
 @keyframes rotate {
   0%,
   20% {
