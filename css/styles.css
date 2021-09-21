@@ -51,6 +51,25 @@ a.nav-link:hover {
   padding-top: 0;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(117, 108, 91);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(80, 37, 32);
+  border-radius: 20px;
+  border: 3px solid rgb(94, 55, 55);
+}
+
 @media (max-width: 992px) {
   .padding-on-md {
     padding-top: 1rem;
