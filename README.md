@@ -13,3 +13,5 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 ### This Project uses **ESLint** and **Prettier**.
 
 If you want, you can `clone` this project and adapt it to your own portfolio website.
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
