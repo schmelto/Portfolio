@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
 
-      - name: npm insall
+      - name: npm install
         run: npm install
 
       # ESLint and Prettier must be in `package.json`
