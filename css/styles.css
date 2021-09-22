@@ -53,21 +53,18 @@ a.nav-link:hover {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: blue orange;
 }
 
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: rgb(117, 108, 91);
+  background: #f8f9fa;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(80, 37, 32);
-  border-radius: 20px;
-  border: 3px solid rgb(94, 55, 55);
+  background-color: #ef5350;
 }
 
 @media (max-width: 992px) {
