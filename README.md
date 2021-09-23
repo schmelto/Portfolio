@@ -2,11 +2,11 @@
 
 This is my custom portfolio website made using _HTML_, _CSS_ and _JavaScript_.
 
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![/built-by-developers](https://forthebadge.com/images/badges/built-by-developers.svg)](https://github.com/schmelto/Portfolio/graphs/contributors) [![check-it-out](https://forthebadge.com/images/badges/check-it-out.svg)](https://schmelto.github.io/Portfolio/) [![built-with-love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/schmelto) [![html](https://forthebadge.com/images/badges/uses-html.svg)](https://www.w3schools.com/html/) [![js](https://forthebadge.com/images/badges/uses-js.svg)](https://www.w3schools.com/js/) [![css](https://forthebadge.com/images/badges/uses-css.svg)](https://www.w3schools.com/css/)
 
 The website is deployed to **GitHub Pages** and can be found [here](https://schmelto.github.io/Portfolio/).
 
-**The Projects are accessed through the GitHub API.**
+**The Projects are being accessed through the GitHub API.**
 
 ![portfolio](./assets/portfolio.gif)
 
