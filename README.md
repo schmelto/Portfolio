@@ -53,4 +53,4 @@ Help us keep this project open and inclusive. Please read and follow our [Code o
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
 
-**Love this project? Consider giving it a ⭐**
+### Love this project? Consider giving it a ⭐
