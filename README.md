@@ -14,4 +14,8 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 
 If you want, you can `clone` this project and adapt it to your own portfolio website.
 
+## Chatbot
+
+The integrated chatbot is build with [SAP Conversational AI](https://cai.tools.sap/).
+
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
