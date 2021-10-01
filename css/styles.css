@@ -412,6 +412,7 @@ a.nav-link:hover {
 }
 
 /* Remove box shadow of chat icon */
-.RecastApp .RecastAppExpander, .CaiApp .CaiAppExpander {
+.RecastApp .RecastAppExpander,
+.CaiApp .CaiAppExpander {
   box-shadow: none !important;
 }
