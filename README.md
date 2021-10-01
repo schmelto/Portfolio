@@ -40,8 +40,14 @@ let githubprojects = [
 
 ## Contribute
 
-If you want to contribute to this project and make it better, your help is very welcome. Contributing is also a great way to learn more about social coding on Github, new technologies and and their ecosystems and how to make constructive, helpful bug reports, feature requests and the noblest of all contributions: a good, clean pull request.
+If you want to contribute to this project and make it better, your help is very welcome. 
 
-Please be aware of to the [Code of Conduct](./CODE_OF_CONDUCT.md) for this project.
+### Want to Help?
+Want to file a bug, contribute some code, or improve documentation? Excellent! Check out one of our [issues](https://github.com/schmelto/Portfolio/issues).
+
+### Code of Conduct
+Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
+
+**Love this project? Consider giving it a ⭐**
