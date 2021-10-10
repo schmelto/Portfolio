@@ -378,7 +378,7 @@ a.nav-link:hover {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
+    background-color: #202124;
     color: #fff;
   }
 
@@ -390,7 +390,7 @@ a.nav-link:hover {
   }
 
   .timeline .event:after {
-    background: #121212;
+    background: #202124;
   }
 
   .card {
@@ -409,4 +409,10 @@ a.nav-link:hover {
 
 #contact {
   margin-bottom: 32px;
+}
+
+/* Remove box shadow of chat icon */
+.RecastApp .RecastAppExpander,
+.CaiApp .CaiAppExpander {
+  box-shadow: none !important;
 }
