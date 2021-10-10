@@ -90,6 +90,7 @@ setColorSheme();
 
 // API
 var githubprojectsdomelement = document.getElementById('githubprojects');
+// using https://fonts.google.com/icons
 let githubprojects = [
   {
     name: 'schmelto/100-days-of-code',
