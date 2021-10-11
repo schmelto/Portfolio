@@ -21,3 +21,5 @@ jobs:
           minPerformanceScore: '50'
           minProgressiveWebAppScore: '40'
           minSeoScore: '50'
+          prCommentEnabled: 'true'
+
