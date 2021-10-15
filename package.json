@@ -4,7 +4,9 @@
   "description": "Portfolio can be found [here](https://schmelto.github.io/portfolio/).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "\"npm run cypress:run\""
   },
   "repository": {
     "type": "git",
