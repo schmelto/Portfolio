@@ -4,7 +4,9 @@
   "description": "Portfolio can be found [here](https://schmelto.github.io/portfolio/).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "npm run cypress:run"
   },
   "repository": {
     "type": "git",
@@ -16,11 +18,16 @@
     "url": "https://github.com/schmelto/portfolio/issues"
   },
   "homepage": "https://github.com/schmelto/portfolio#readme",
-  "devDependencies": {
-    "eslint": "^7.32.0"
-  },
   "dependencies": {
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.4.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "eslint": "^7.32.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
