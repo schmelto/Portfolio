@@ -1,5 +1,5 @@
 name: automate tests
-on: [push, pull_request]
+on: [push]
 
 jobs:
   tests:

@@ -1,4 +1,4 @@
 {
-    "ignoreTestFiles": "*.js",
-    "testFiles": "**/*.feature"
+  "ignoreTestFiles": "*.js",
+  "testFiles": "**/*.feature"
 }
