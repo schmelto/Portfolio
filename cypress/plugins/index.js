@@ -17,7 +17,6 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-// eslint-disable-next-line no-unused-vars
 
 const cucumber = require('cypress-cucumber-preprocessor').default
 
