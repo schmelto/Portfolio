@@ -1,4 +1,4 @@
-# :clapper: Portfolio Website
+# :man_technologist: Portfolio Website
 
 This is my custom portfolio website made using _HTML_, _CSS_ and _JavaScript_.
 
