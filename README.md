@@ -21,6 +21,12 @@ To run the project localy on your computer please clone the project and run `npm
 
 Due the project only uses _HTML_, _CSS_ and _JavaScript_ you can access the website on you local machine by opening the `index.html`-file with your favorite browser.
 
+### Automated tests and formatter
+
+Befor you submit a pull request you can run the tests with `npm test`. This will run all tests and will show you all errors. The tests where written in [cucumber](https://cucumber.io/) and [cypress](https://www.cypress.io/).
+
+Further you shoulr run the formatter with `npm run format`.
+
 ### Add another project to the website
 
 The projects shown on the website are being accessed through the [GitHub API](https://docs.github.com/en/rest) and can be maintained by modifing the [scripts.js](./js/scripts.js).
