@@ -19,7 +19,7 @@ To run the project localy on your computer please clone the project and run `npm
 
 > This Project uses **[ESLint](https://eslint.org/)** and **[Prettier](https://prettier.io/)**.
 
-Due the project only uses _HTML_, _CSS_ and _JavaScript_ you can access the website on you local machine by opening the `index.html`-file with your favorite browser.
+Due the project only uses _HTML_, _CSS_ and _JavaScript_ you can access the website on you local machine by opening the `index.html`-file with your favorite browser or by running `npm start`.
 
 ### Automated tests and formatter
 
