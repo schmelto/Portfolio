@@ -6,6 +6,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "format": "prettier --write .",
     "test": "npm run cypress:run"
   },
   "repository": {
