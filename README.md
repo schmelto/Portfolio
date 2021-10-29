@@ -43,6 +43,11 @@ let githubprojects = [
 - **name**: username/repository (GitHub)
 - **icon**: icon you want to diplay for the project (using [Google Font Icons](https://fonts.google.com/icons))
 
+## Chatbot
+
+The chatbot integrated into the website is using [SAP Conversational AI](https://cai.tools.sap/).
+You can build your own chatbot using the [SAP Conversational AI](https://cai.tools.sap/) platform and integrate it into the website by changing the script in the [index.html](./index.html) file.
+
 ## Contribute
 
 If you want to contribute to this project and make it better, your help is very welcome.
@@ -55,10 +60,6 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! C
 
 Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
-## Chatbot
-
-The integrated chatbot is build with [SAP Conversational AI](https://cai.tools.sap/).
+### Love this project? Consider giving it a ⭐
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
-
-### Love this project? Consider giving it a ⭐
