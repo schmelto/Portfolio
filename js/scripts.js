@@ -94,19 +94,19 @@ var githubprojectsdomelement = document.getElementById('githubprojects');
 let githubprojects = [
   {
     name: 'schmelto/100-days-of-code',
-    icon: 'description',
+    icon: 'description'
   },
   {
     name: 'schmelto/NewsApp',
-    icon: 'article',
+    icon: 'article'
   },
   {
-    name: 'schmelto/portfolio',
-    icon: 'person',
+    name: 'schmelto/Portfolio',
+    icon: 'person'
   },
   {
     name: 'schmelto/ImpactHackathon',
-    icon: 'home',
+    icon: 'home'
   },
 ];
 
