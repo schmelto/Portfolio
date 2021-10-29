@@ -398,7 +398,7 @@ a.nav-link:hover {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
+    background-color: #202124;
     color: #fff;
   }
 
@@ -406,15 +406,15 @@ a.nav-link:hover {
     color: #fff;
   }
   .navbar {
-    background-color: #343a40;
+    background-color: #303134;
   }
 
   .timeline .event:after {
-    background: #121212;
+    background: #202124;
   }
 
   .card {
-    background-color: #343a40;
+    background-color: #303134;
   }
 
   .card-text {

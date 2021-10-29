@@ -1,26 +1,35 @@
 {
   "name": "portfolio",
-  "version": "1.9.0",
-  "description": "Portfolio can be found [here](https://schmelto.github.io/portfolio/).",
-  "main": "index.js",
+  "version": "1.14.0",
+  "description": "My portfolio website",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "format": "prettier --write .",
+    "test": "npm run cypress:run",
+    "start": "index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schmelto/portfolio.git"
+    "url": "git+https://github.com/schmelto/Portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/schmelto/portfolio/issues"
+    "url": "https://github.com/schmelto/Portfolio/issues"
   },
-  "homepage": "https://github.com/schmelto/portfolio#readme",
-  "devDependencies": {
-    "eslint": "^7.32.0"
-  },
+  "homepage": "https://github.com/schmelto/Portfolio#readme",
   "dependencies": {
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.4.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "eslint": "^7.32.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
