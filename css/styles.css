@@ -67,6 +67,26 @@ a.nav-link:hover {
   background-color: #ef5350;
 }
 
+
+/* Chatbot */
+.RecastApp .RecastAppMessage .RecastAppCard--text, .RecastApp .RecastAppMessage .CaiAppCard--text, .CaiApp .CaiAppMessage .RecastAppCard--text, .CaiApp .CaiAppMessage .CaiAppCard--text {
+  color: black;
+}
+
+@media (max-width: 419px) {
+  .RecastApp .RecastAppChat.open, .CaiApp .CaiAppChat.open {
+    height: 100vh;
+  }
+
+  .RecastApp .RecastAppLive, .CaiApp .CaiAppLive {
+    height: 90vh !important;
+  }
+
+  .RecastApp .RecastAppInput, .CaiApp .CaiAppInput {
+    position: fixed !important;
+  }
+}
+
 @media (max-width: 992px) {
   .padding-on-md {
     padding-top: 1rem;
