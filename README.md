@@ -60,6 +60,10 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! C
 
 Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
+## Chatbot
+
+The integrated chatbot is build with [SAP Conversational AI](https://cai.tools.sap/).
+
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/schmelto/Portfolio)
 
 ### Love this project? Consider giving it a ⭐
