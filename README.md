@@ -43,6 +43,12 @@ let githubprojects = [
 - **name**: username/repository (GitHub)
 - **icon**: icon you want to diplay for the project (using [Google Font Icons](https://fonts.google.com/icons))
 
+> Due lots of projects using icons in their project description the script in [js/scripts.js](./js/scripts.js) remove the github icons.
+> 
+> ```js
+> project.description.replace(/:[^}]*:/, '');
+> ```
+
 ## Chatbot
 
 The chatbot integrated into the website is using [SAP Conversational AI](https://cai.tools.sap/).
