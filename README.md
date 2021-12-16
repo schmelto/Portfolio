@@ -4,7 +4,7 @@ This is my custom portfolio website made using _HTML_, _CSS_ and _JavaScript_.
 
 The website is deployed to **GitHub Pages** and can be found [here](https://schmelto.github.io/Portfolio/).
 
-[![portfolio](./assets/portfolio.gif)](https://schmelto.github.io/Portfolio/)
+![portfolio](https://user-images.githubusercontent.com/62628408/146424076-d0ca4032-bb2f-44ce-8920-5619f4dee695.gif)
 
 ## Prerequisites
 
