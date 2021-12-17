@@ -44,7 +44,7 @@ let githubprojects = [
 - **icon**: icon you want to diplay for the project (using [Google Font Icons](https://fonts.google.com/icons))
 
 > Due lots of projects using icons in their project description the script in [js/scripts.js](./js/scripts.js) remove the github icons.
-> 
+>
 > ```js
 > project.description.replace(/:[^}]*:/, '');
 > ```
