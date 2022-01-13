@@ -25,7 +25,7 @@ Due the project only uses _HTML_, _CSS_ and _JavaScript_ you can access the webs
 
 Befor you submit a pull request you can run the tests with `npm test`. This will run all tests and will show you all errors. The tests where written in [cucumber](https://cucumber.io/) and [cypress](https://www.cypress.io/).
 
-Further you shou run the formatter with `npm run format`.
+Further you should run the formatter with `npm run format`.
 
 ### Add another project to the website
 
