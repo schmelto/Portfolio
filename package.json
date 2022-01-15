@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.17.2",
+  "version": "1.17.3",
   "description": "My portfolio website",
   "main": "index.html",
   "scripts": {
