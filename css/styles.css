@@ -51,6 +51,22 @@ a.nav-link:hover {
   padding-top: 0;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ef5350;
+}
+
 /* Chatbot */
 .RecastApp .RecastAppMessage .RecastAppCard--text,
 .RecastApp .RecastAppMessage .CaiAppCard--text,
