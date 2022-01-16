@@ -1,4 +1,27 @@
 /* eslint-disable no-unused-vars */
+
+window.onload = function(){
+  fetchData();
+};
+// get json file
+const fetchData = async () => {
+  try {
+    const res = await fetch("js/data.json");
+    let data = await res.json();
+    console.log(data);
+    setData(data);
+  } catch (e) {
+    console.log("something went wrong!", e);
+  }
+};
+
+function setData(data){
+  document.getElementById('title').innerHTML = data.title;
+  document.getElementById('name').innerHTML = data.name;
+  document.getElementById('picture').innerHTML = `<img style="height: 20rem" src="${data.picture}" class="img mx-auto d-block" alt="${data.name} ${data.lastname}">`;
+}
+
+
 function setupTypewriter(t) {
   const HTML = t.innerHTML;
   t.innerHTML = '';
