@@ -1,7 +1,7 @@
 {
-    "name": "Jone",
-    "lastName": "Doe",
-    "title": "< schmelto />",
-    "picture": "./assets/tom.png",
-    "email": "test@test.de"
+  "name": "Jone",
+  "lastName": "Doe",
+  "title": "< schmelto />",
+  "picture": "./assets/tom.png",
+  "email": "test@test.de"
 }
