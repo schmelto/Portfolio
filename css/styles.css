@@ -78,7 +78,7 @@ a.nav-link:hover {
 @media (max-width: 419px) {
   .RecastApp .RecastAppChat.open,
   .CaiApp .CaiAppChat.open {
-    height: 100vh;
+    height: 100%;
   }
 
   .RecastApp .RecastAppLive,
