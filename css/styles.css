@@ -42,7 +42,8 @@ h3 {
 }
 
 a.nav-link:hover {
-  color: #ef5350 !important;
+  color: #ef5350 
+  !important;
   text-decoration: none;
   cursor: pointer;
 }
