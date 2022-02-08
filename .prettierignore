@@ -3,5 +3,5 @@ assets/*
 .github/ISSUE_TEMPLATE/*
 .github/PULL_REQUEST_TEMPLATE/*
 
-./blog/aricles/*
-./blog/blogposts.json
+blog/articles/*
+blog/blogposts.json
