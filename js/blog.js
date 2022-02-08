@@ -71,7 +71,6 @@ const fetchArticle = async (article) => {
     // get the content
     data = data.split('\n').slice(4).join('\n');
     createArticle(title, author, date, parseMarkdown_full(data));
-
   } catch (e) {
     console.log('something went wrong!', e);
   }
