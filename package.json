@@ -8,7 +8,8 @@
     "cypress:run": "cypress run",
     "format": "prettier --write .",
     "test": "npm run cypress:run",
-    "start": "index.html"
+    "start": "index.html",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   "devDependencies": {
     "cypress": "^8.6.0",
     "cypress-cucumber-preprocessor": "^4.3.0",
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "husky": "^7.0.4"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
