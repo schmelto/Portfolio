@@ -1,7 +1,6 @@
 title: Hello World in ABAP Programming Language
 date: 2/8/2022
 author: Tom Schmelzer
-description: Write your first Hello World ABAP programm
 
 # ABAP Hello World
 
