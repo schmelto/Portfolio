@@ -63,32 +63,29 @@ const fetchArticle = async (article) => {
     const res = await fetch(article);
     let data = await res.text();
 
-    // get the title, author, date and description
+    // get the title, author and date
     let author = data.split('\n')[2].replace('author: ', '');
     let title = data.split('\n')[0].replace('title: ', '');
     let date = data.split('\n')[1].replace('date: ', '');
-    let description = data.split('\n')[3].replace('description: ', '');
 
     // get the content
-    data = data.split('\n').slice(5).join('\n');
-    createArticle(title, author, date, description, parseMarkdown_full(data));
+    data = data.split('\n').slice(4).join('\n');
+    createArticle(title, author, date, parseMarkdown_full(data));
 
   } catch (e) {
     console.log('something went wrong!', e);
   }
 };
 
-function createArticle(title, author, date, description, content) {
+function createArticle(title, author, date, content) {
   let blogpost = `
   <div class="flex-card">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">${date} - ${title}</h5>
-              <h6 class="card-subtitle mb-2 text-muted" >${author}</h6>
-              <p class="card-text" id="description">${description}</p>
+              <h5 class="card-title">${title}</h5>
+              <h6 class="card-subtitle mb-2 text-muted" >${date} - ${author}</h6>
               <details>
                 <summary>read the full article</summary>
-                <br><hr><br>
                 <p id="markdown">${content}</p>
               </details>
             </div>
