@@ -39,6 +39,5 @@ date: 2/11/2022 <br>
 author: Tom Schmelzer
 ```
 
-Than add the content of the blog post to the file. The content can be in multiple lines.
-
-Last but not least, add the blog post to the list of blog posts in the file `blogposts.json`.
+* Than add the content of the blog post to the file. The content can be in multiple lines.
+* Last but not least, add the blog post to the list of blog posts in the file `blogposts.json`.
