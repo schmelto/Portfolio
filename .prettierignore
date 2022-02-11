@@ -1,3 +1,7 @@
 assets/*
 *.html
 .github/ISSUE_TEMPLATE/*
+.github/PULL_REQUEST_TEMPLATE/*
+
+blog/articles/*
+blog/blogposts.json
