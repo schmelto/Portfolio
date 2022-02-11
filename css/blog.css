@@ -2,19 +2,17 @@ summary:focus {
   outline: none;
 }
 
-a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
 .h3_markdown {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding-top: 1rem;
 }
 
 .h2_markdown {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 .h1_markdown {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-top: 1rem;
 }

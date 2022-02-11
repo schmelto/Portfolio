@@ -1,38 +1,44 @@
-title: Hello World in ABAP Programming Language
-date: 2/8/2022
+title: My first blog article
+date: 2/11/2022
 author: Tom Schmelzer
 
-# ABAP Hello World
+# My fist blog article
 
-**A**dvanced 
-**B**usiness 
-**A**pplication 
-**P**rogramming
+This is my first blog article on this website and it will explain how this blog website was created and how it works.
 
-## Let's start with a simple Hello World-Programm
+## How is a blog article structured?
 
-* From SAP Easy Access screen type the t-code `SE38` in the command field to launch ABAP Editor.
-* In the ABAP Editor – Initial Screen, enter the program name as `zdemo_helloworld`. SAP requires all customized programs, which are created by customers, to have names starting with the letter Z or Y.
-* Click the `Create` button to create the new program. SAP will popup a new window and request you to fill information about the program such as program title and program type... Just fill the program title `Hello World`, program type `Executable program` and click the `Save` button.
-* The system will also request you to provide the `Object directory entry` of the new program. To make it simple, just click the `Local Object` button. By doing this, you specify that you don’t want to import this program to other SAP systems such as the quality assurance system or production system.
-* The system will display ABAP Editor for you to start writing ABAP code.
-* Type the following code and click the `Activate` button. When you activate the program, the SAP system checks the program syntax, compiles it, and generates the run-time version.
+A blog post is a markdown file with a header that contains the following information:
 
-```abap
-WRITE 'Hello World'.
+* **title:** Here my first blog article
+* **date:** 2/11/2022
+* **author:** Tom Schmelzer
+
+At the fifth line starts the actual content of the blog post.
+
+For example this blog post can be found in the folder `blog\articles\article1.md` of the GitHub repository which can be found [here](https://github.com/schmelto/Portfolio).
+
+## How the website displays the blog posts
+
+In the blog folder there are two files:
+
+* blogposts.json: This file contains a list of all blog posts which should be displayed
+* blog.html: This file is the main page of the blog. It contains a list of all blog posts.
+
+The actual rendering of the md files and conversion to html is done in `js/blog.js`.
+In here there is a markdown parser that converts the markdown files to html.
+
+## How to add a new blog post?
+
+* Create a new markdown file in the folder `blog\articles`.
+* Add the following header to the top of the file:
+
+```md
+title: My first blog article <br>
+date: 2/11/2022 <br>
+author: Tom Schmelzer
 ```
-* To execute the program, you click the `Direct Processing` button.
 
-**How it works:**
+Than add the content of the blog post to the file. The content can be in multiple lines.
 
-* The `report` keyword indicates that this program is a report or an executable program. It means you can invoke the program directly from the `SE38` t-code.
-* To output a text to the screen, you use the `write` statement with a specified string.
-* In ABAP, every statement ends with a full-stop (`.`). Therefore, you need to add the full-stop after the string `'Hello World'`.
-
-## Full program
-
-```abap
-REPORT zdemo_helloworld.
-
-WRITE 'Hello World'.
-```
+Last but not least, add the blog post to the list of blog posts in the file `blogposts.json`.

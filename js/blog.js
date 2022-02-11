@@ -10,6 +10,7 @@ function parseMarkdown(markdownText) {
     .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
     .replace(/\n$/gim, '<br />')
     .replace(/```js/gim, '<code>') // for js code
+    .replace(/```md/gim, '<code>') // for md code
     .replace(/```abap/gim, '<code>') // for abap code
     .replace(/```/gim, '</code>')
 
