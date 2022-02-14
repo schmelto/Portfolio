@@ -1,4 +1,4 @@
-const link = "https://github.com/schmelto/Portfolio/edit/main/blog/"
+const link = 'https://github.com/schmelto/Portfolio/edit/main/blog/';
 
 function parseMarkdown(markdownText) {
   let htmlText = markdownText
@@ -62,7 +62,6 @@ const fetchData = async () => {
 };
 
 const fetchArticle = async (article) => {
-
   let edit_link = link + article;
   console.log(edit_link);
   try {
