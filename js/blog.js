@@ -1,3 +1,5 @@
+const link = "https://github.com/schmelto/Portfolio/edit/main/blog/"
+
 function parseMarkdown(markdownText) {
   let htmlText = markdownText
     .replace(/^### (.*$)/gim, '<h3 class="h3_markdown">$1</h3>')
@@ -60,6 +62,9 @@ const fetchData = async () => {
 };
 
 const fetchArticle = async (article) => {
+
+  let edit_link = link + article;
+  console.log(edit_link);
   try {
     const res = await fetch(article);
     let data = await res.text();
@@ -71,13 +76,13 @@ const fetchArticle = async (article) => {
 
     // get the content
     data = data.split('\n').slice(4).join('\n');
-    createArticle(title, author, date, parseMarkdown_full(data));
+    createArticle(title, author, date, parseMarkdown_full(data), edit_link);
   } catch (e) {
     console.log('something went wrong!', e);
   }
 };
 
-function createArticle(title, author, date, content) {
+function createArticle(title, author, date, content, edit_link) {
   let blogpost = `
   <div class="flex-card">
           <div class="card">
@@ -87,6 +92,7 @@ function createArticle(title, author, date, content) {
               <details>
                 <summary>read the full article</summary>
                 <p id="markdown">${content}</p>
+                <a href="${edit_link}" style="float: right;">Help improving this article</a>
               </details>
             </div>
           </div>
