@@ -64,12 +64,6 @@ typewriter = setupTypewriter(typewriter);
 // eslint-disable-next-line no-undef
 typewriter.type();
 
-function sendMail() {
-  let subject = document.getElementById('mailsubject').value;
-  let body = document.getElementById('mailbody').value;
-  window.location = `mailto:tom.schmelzer@web.de?subject=${subject}&body=${body}`;
-}
-
 const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 darkModeMediaQuery.addEventListener('change', () => {
   setColorSheme();
