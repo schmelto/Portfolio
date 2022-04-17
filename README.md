@@ -13,7 +13,7 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 
 ## How to start?
 
-### Install and develop on local machine.
+### Install and develop on local machine
 
 To run the project locally on your computer please clone the project using this command `git clone` and then run `npm install` to install all required dependencies.
 
