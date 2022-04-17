@@ -62,7 +62,7 @@ If you want to contribute to this project and make it better, your help is very 
 
 Want to file a bug, contribute some code, or improve documentation? Excellent! Check out one of our [issues](https://github.com/schmelto/Portfolio/issues).
 
-### Code of Conduct.
+### Code of Conduct
 
 Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
