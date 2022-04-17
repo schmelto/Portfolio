@@ -27,7 +27,7 @@ Before you submit a pull request you can run the tests with `npm test`. This wil
 
 Further you should run the formatter with `npm run format`.
 
-### Add another project to the website.
+### Add another project to the website
 
 The projects shown on the website are being accessed through the [GitHub API](https://docs.github.com/en/rest) and can be maintained by modifing the [scripts.js](./js/scripts.js).
 
