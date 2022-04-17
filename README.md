@@ -6,7 +6,7 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 
 ![portfolio](https://user-images.githubusercontent.com/62628408/146424076-d0ca4032-bb2f-44ce-8920-5619f4dee695.gif)
 
-## Prerequisites.
+## Prerequisites
 
 - [Git](https://git-scm.com/)
 - [NodeJs](https://nodejs.org/)
