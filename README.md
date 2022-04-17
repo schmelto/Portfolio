@@ -11,11 +11,11 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 - [Git](https://git-scm.com/)
 - [NodeJs](https://nodejs.org/)
 
-## How to start
+## How to start?
 
 ### Install and develop on local machine
 
-To run the project localy on your computer please clone the project and run `npm install` to install all dependencies.
+To run the project locally on your computer please clone the project using this command `git clone` and then run `npm install` to install all required dependencies.
 
 > This Project uses **[ESLint](https://eslint.org/)** and **[Prettier](https://prettier.io/)**.
 
@@ -23,7 +23,7 @@ Due the project only uses _HTML_, _CSS_ and _JavaScript_ you can access the webs
 
 ### Automated tests and formatter
 
-Befor you submit a pull request you can run the tests with `npm test`. This will run all tests and will show you all errors. The tests where written in [cucumber](https://cucumber.io/) and [cypress](https://www.cypress.io/).
+Before you submit a pull request you can run the tests with `npm test`. This will run all tests and will show you all the errors. The tests were written in [cucumber](https://cucumber.io/) and [cypress](https://www.cypress.io/).
 
 Further you should run the formatter with `npm run format`.
 
@@ -41,9 +41,9 @@ let githubprojects = [
 ```
 
 - **name**: username/repository (GitHub)
-- **icon**: icon you want to diplay for the project (using [Google Font Icons](https://fonts.google.com/icons))
+- **icon**: icon you want to display for the project (using [Google Font Icons](https://fonts.google.com/icons))
 
-> Due lots of projects using icons in their project description the script in [js/scripts.js](./js/scripts.js) remove the github icons.
+> Due to lots of projects using icons in their project description the script in [js/scripts.js](./js/scripts.js) remove the github icons.
 >
 > ```js
 > project.description.replace(/:[^}]*:/, '');
