@@ -27,6 +27,7 @@ function getprojectissues(project) {
 }
 
 function createIssueCard(issue) {
+  console.log(issue);
   let labelstring = addLabels(issue.labels);
   let repo = issue.repository_url.replace(`https://api.github.com/repos/`, '');
   let issueCard = `
@@ -34,7 +35,8 @@ function createIssueCard(issue) {
     <a href="${issue.html_url}" target="_blank" rel="noopener">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">${issue.title}</h5>
+          <h5 class="card-title"><img class="rounded-circle" alt="${issue.user.login}" src="${issue.user.avatar_url}"
+          data-holder-rendered="true" style="height: 30px; margin-right: 5px">${issue.title}</h5>
           <h6 class="card-subtitle mb-2 text-muted">${repo}</h6>
           <p class="card-text">${labelstring}</p>
         </div>
