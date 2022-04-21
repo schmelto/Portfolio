@@ -3,7 +3,7 @@ let githubprojects = [
   'schmelto/NewsApp',
   'schmelto/Portfolio',
   'schmelto/ImpactHackathon',
-  'schmelto/schmelto'
+  'schmelto/schmelto',
 ];
 
 githubprojects.forEach((project) => {
