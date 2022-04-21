@@ -135,6 +135,8 @@ function createprojectcard(project, icon) {
   return projectcard;
 }
 
+
+
 function getVersionOfPortfolio() {
   fetch(`https://api.github.com/repos/schmelto/Portfolio/releases/latest`)
     .then((response) => {
