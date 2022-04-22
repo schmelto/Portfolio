@@ -1,0 +1,16 @@
+name: Documentation
+description: Things about the documentation
+title: "[Docs]: "
+labels: ["📄 aspect: text"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this report!
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation
+      description: What should be updated in the documentation?
+    validations:
+      required: true
