@@ -49,11 +49,6 @@ let githubprojects = [
 > project.description.replace(/:[^}]*:/, '');
 > ```
 
-## Chatbot
-
-The chatbot integrated into the website is using [SAP Conversational AI](https://cai.tools.sap/).
-You can build your own chatbot using the [SAP Conversational AI](https://cai.tools.sap/) platform and integrate it into the website by changing the script in the [index.html](./index.html) file.
-
 ## Contribute
 
 If you want to contribute to this project and make it better, your help is very welcome.
