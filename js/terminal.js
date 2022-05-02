@@ -17,7 +17,6 @@ function getInput() {
 // append the input to the terminal
 function appendToTerminal(input) {
     document.getElementById("terminal").innerHTML += `<span class="terminal_user">> guest@portfolio: </span>` + input + "<br>";
-    // scroll to bottom
     document.getElementById("consolebody").scrollTop = document.getElementById("consolebody").scrollHeight;
 }
 
