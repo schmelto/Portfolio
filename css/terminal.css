@@ -51,7 +51,8 @@ input {
 
 .console .consolebody {
     box-sizing: border-box;
-
+    padding-left: 6px;
+    padding-right: 6px;
     height: calc(100% - 40px);
     overflow-x: hidden;
     overflow-y: scroll;

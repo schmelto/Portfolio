@@ -17,6 +17,8 @@ function getInput() {
 // append the input to the terminal
 function appendToTerminal(input) {
     document.getElementById("terminal").innerHTML += `<span class="terminal_user">> guest@portfolio: </span>` + input + "<br>";
+    // scroll to bottom
+    document.getElementById("terminal").scrollTop = -1;
 }
 
 // on windows load append the welcome message
