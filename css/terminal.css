@@ -4,31 +4,31 @@ input {
     /* border-bottom: 1px solid #fff; */
     color: #fff;
     outline: none;
-  }
+}
 
-  .terminal_user {
-      color: #63de00;
-      font-weight: bold;
-  }
+.terminal_user {
+    color: #63de00;
+    font-weight: bold;
+}
 
-  .command {
-        font-weight: bold;
-  }
+.command {
+    font-weight: bold;
+}
 
 
 
-  .console {
+.console {
     font-family: 'Fira Mono';
     height: 65vh;
     box-sizing: border-box;
     margin-bottom: 4rem;
-  }
+}
 
-  .card-text{
-      margin: 0;
-  }
+.card-text {
+    margin: 0;
+}
 
-  
+
 .console header {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -37,9 +37,9 @@ input {
     line-height: 3rem;
     text-align: center;
     color: #DDD;
-  }
+}
 
-  .console footer {
+.console footer {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #555;
@@ -47,9 +47,9 @@ input {
     line-height: 1rem;
     text-align: center;
     color: #DDD;
-  }
-  
-  .console .consolebody {
+}
+
+.console .consolebody {
     box-sizing: border-box;
 
     height: calc(100% - 40px);
@@ -58,5 +58,4 @@ input {
     scroll-behavior: smooth;
     background-color: #303134;
     color: #63de00;
-  }
-  
+}

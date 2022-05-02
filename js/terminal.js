@@ -44,7 +44,7 @@ document.getElementById("console_input").addEventListener("keyup", function (eve
             if (input === "contact") input += contact();
         } else if (input === "") input += "";
         else input += `<br> '` + input + "' is not recognized as an internal or external command, operable program or batch file.";
-    
+
 
         appendToTerminal(input);
     }
@@ -79,7 +79,7 @@ function about() {
 
 }
 
-function projects(){
+function projects() {
     var output = "<br>";
     output += "Projects:<br>";
     output += "";
