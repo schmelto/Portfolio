@@ -63,7 +63,6 @@ const fetchData = async () => {
 
 const fetchArticle = async (article) => {
   let edit_link = link + article;
-  console.log(edit_link);
   try {
     const res = await fetch(article);
     let data = await res.text();

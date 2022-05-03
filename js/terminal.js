@@ -1,10 +1,10 @@
 // list of commands
 var commands = {
-  help: 'Displays a list of commands',
-  clear: 'Clears the terminal',
   about: 'Information about Tom',
-  projects: 'Displays a list of projects',
+  clear: 'Clears the terminal',
   contact: 'Displays a list of contact information',
+  help: 'Displays a list of commands',
+  projects: 'Displays a list of projects',
 };
 
 // get the input from the user
@@ -40,10 +40,8 @@ document
         if (input === 'help') input += help();
         if (input === 'clear') {
           clear();
-          exit();
+          return;
         }
-        if (input === 'time') input += time();
-        if (input === 'date') input += date();
         if (input === 'about') input += about();
         if (input === 'projects') input += projects();
         if (input === 'contact') input += contact();
@@ -53,7 +51,6 @@ document
           `<br> '` +
           input +
           "' is not recognized as an internal or external command, operable program or batch file.";
-
       appendToTerminal(input);
     }
   });
@@ -66,10 +63,31 @@ function isCommand(input) {
 
 // if command is help then print the list of commands
 function help() {
-  var output = '<br>';
-  for (var key in commands) {
-    output += key + ' - ' + commands[key] + '<br>';
+  var output = '<table>';
+
+  for (var command in commands) {
+    output += '<tr>';
+    output += '<td>' + command + '</td>';
+    output += '<td style="padding-left: 10px">' + commands[command] + '</td>';
+    output += '</tr>';
   }
+
+  output += '</table>';
+
+  return output;
+}
+
+function projects() {
+  var output = '<br>';
+  output +=
+    'see projects on <a href="https://github.com/schmelto?tab=repositories" target="_blank" rel="noopener">GitHub</a>.';
+  return output;
+}
+
+function contact() {
+  var output = '<br>';
+  output += 'Contact:<br>';
+  output += 'Email: tom.schmelzer@web.de';
   return output;
 }
 
@@ -80,24 +98,6 @@ function clear() {
 function about() {
   var output = '<br>';
   output += 'Name: Tom<br>';
-  output += 'Age: 24<br>';
-  output += 'Location: London, UK<br>';
-  output += 'Occupation: Software Engineer<br>';
-  return output;
-}
-
-function projects() {
-  var output = '<br>';
-  output += 'Projects:<br>';
-  output += '';
-
-  return output;
-}
-
-function contact() {
-  var output = '<br>';
-  output += 'Contact:<br>';
-  output += 'Email: tom.schmelzer@web.de<br>';
-
+  output += 'Occupation: IT Application Consultant';
   return output;
 }

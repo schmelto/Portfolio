@@ -5,6 +5,10 @@ input {
   outline: none;
 }
 
+.key {
+  font-weight: bold;
+}
+
 .terminal_user {
   color: #63de00;
   font-weight: bold;

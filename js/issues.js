@@ -27,7 +27,6 @@ function getprojectissues(project) {
 }
 
 function createIssueCard(issue) {
-  console.log(issue);
   let labelstring = addLabels(issue.labels);
   let repo = issue.repository_url.replace(`https://api.github.com/repos/`, '');
   let issueCard = `
