@@ -1,62 +1,53 @@
 input {
-    border: none;
-    background: transparent;
-    /* border-bottom: 1px solid #fff; */
-    color: #fff;
-    outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
 }
 
 .terminal_user {
-    color: #63de00;
-    font-weight: bold;
+  color: #63de00;
+  font-weight: bold;
 }
-
-.command {
-    font-weight: bold;
-}
-
-
 
 .console {
-    font-family: 'Fira Mono';
-    height: 65vh;
-    box-sizing: border-box;
-    margin-bottom: 4rem;
+  height: 65vh;
+  box-sizing: border-box;
+  margin-bottom: 4rem;
 }
 
 .card-text {
-    margin: 0;
+  margin: 0;
 }
 
-
 .console header {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-color: #555;
-    height: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    color: #DDD;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #555;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #ddd;
 }
 
 .console footer {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #555;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    color: #DDD;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #555;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #ddd;
 }
 
 .console .consolebody {
-    box-sizing: border-box;
-    padding-left: 6px;
-    padding-right: 6px;
-    height: calc(100% - 40px);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    background-color: #303134;
-    color: #63de00;
+  box-sizing: border-box;
+  padding-left: 6px;
+  padding-right: 6px;
+  height: calc(100% - 40px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background-color: #303134;
+  color: #63de00;
 }
