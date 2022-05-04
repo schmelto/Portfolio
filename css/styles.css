@@ -383,7 +383,7 @@ a.nav-link:hover {
 }
 
 .card-text {
-  color: white;
+  color: black;
 }
 
 @media (prefers-color-scheme: dark) {
