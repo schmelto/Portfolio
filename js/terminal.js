@@ -11,7 +11,7 @@ var commands = {
 function getInput() {
   var input = document.getElementById('console_input').value;
   document.getElementById('console_input').value = '';
-  return input;
+  return input.toLowerCase();
 }
 
 // append the input to the terminal
