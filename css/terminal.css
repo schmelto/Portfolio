@@ -57,9 +57,8 @@ input {
 }
 
 @media (prefers-color-scheme: light) {
-
   .console .consolebody {
-    background-color: #303134;;
+    background-color: #303134;
     color: #000;
   }
   /* make text white in card-text */
