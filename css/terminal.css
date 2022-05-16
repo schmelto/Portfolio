@@ -52,6 +52,18 @@ input {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  background-color: #303134;
+  /* background-color: #303134; */
   color: #63de00;
+}
+
+@media (prefers-color-scheme: light) {
+
+  .console .consolebody {
+    background-color: #303134;;
+    color: #000;
+  }
+  /* make text white in card-text */
+  .card-text {
+    color: white !important;
+  }
 }
