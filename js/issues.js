@@ -4,6 +4,7 @@ let githubprojects = [
   'schmelto/Portfolio',
   'schmelto/ImpactHackathon',
   'schmelto/schmelto',
+  'schmelto/abap'
 ];
 
 githubprojects.forEach((project) => {
