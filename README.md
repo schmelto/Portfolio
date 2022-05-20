@@ -15,7 +15,7 @@ The website is deployed to **GitHub Pages** and can be found [here](https://schm
 
 ### Install and develop on local machine
 
-To run the project locally on your computer please clone the project using this command `git clone` and then run `npm install` to install all required dependencies.
+To run the project locally on your computer please clone the project using this command `git clone` and run `npm install` to install all required dependencies.
 
 > This Project uses **[ESLint](https://eslint.org/)** and **[Prettier](https://prettier.io/)**.
 
