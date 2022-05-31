@@ -8,7 +8,7 @@ let githubprojects = [
 ];
 
 var githubissues = document.getElementById('githubissues');
-// var githublabels = document.getElementById('githublabels');
+var githublabels = document.getElementById('githublabels');
 
 // get issues as promis
 function getIssues(project) {
@@ -26,6 +26,7 @@ function getIssues(project) {
 
 let all_issues = [];
 let all_labels = [];
+
 githubprojects.forEach((project) => {
   getIssues(project).then((issues) => {
     // push all issues to array
@@ -39,27 +40,59 @@ githubprojects.forEach((project) => {
 
 // await promis and create html
 Promise.all(githubprojects.map(getIssues)).then(() => {
-  all_issues.forEach((issue) => {
-    githubissues.innerHTML += createIssueCard(issue);
+  // create labels
+  all_labels.forEach((label) => {
+    // only if not already in list
+    if (
+      !githublabels.querySelector(
+        `span[style="background-color: #${label.color}; color: ${invertColor(
+          label.color,
+          true
+        )}; margin-right: 5px"]`
+      )
+    ) {
+      githublabels.innerHTML += `<span class="badge" style="background-color: #${
+        label.color
+      }; color: ${invertColor(label.color, true)}; margin-right: 5px">${
+        label.name
+      }</span>`;
+    }
   });
-  // // create labels
-  // all_labels.forEach((label) => {
-  //   // only if not already in list
-  //   if (
-  //     !githublabels.querySelector(
-  //       `span[style="background-color: #${label.color}; color: ${invertColor(
-  //         label.color,
-  //         true
-  //       )}; margin-right: 5px"]`
-  //     )
-  //   ) {
-  //     githublabels.innerHTML += `<span class="badge" style="background-color: #${
-  //       label.color
-  //     }; color: ${invertColor(label.color, true)}; margin-right: 5px">${
-  //       label.name
-  //     }</span>`;
-  //   }
-  // });
+
+  all_issues.forEach((issue) => {
+      if (!issue.pull_request) {
+    githubissues.innerHTML += createIssueCard(issue);
+      }
+  });
+
+  // when click on label show only issues with that label and hightlight label
+  githublabels.addEventListener('click', (e) => {
+    let label = e.target.innerText;
+    let label_issues = all_issues.filter((issue) => {
+      return issue.labels.some((label_issue) => {
+        return label_issue.name === label;
+      });
+    });
+    githubissues.innerHTML = '';
+    // if no label is selected show all issues
+    if (label_issues.length === 0) {
+      label_issues = all_issues;
+    }
+
+    label_issues.forEach((issue) => {
+      githubissues.innerHTML += createIssueCard(issue);
+    });
+    githublabels.querySelectorAll('span').forEach((label) => {
+      label.classList.remove('active');
+    });
+    e.target.classList.add('active');
+
+    
+  });
+
+
+
+
 });
 
 function createIssueCard(issue) {
