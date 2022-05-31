@@ -1,9 +1,9 @@
 let githubprojects = [
-  // 'schmelto/100-days-of-code',
-  // 'schmelto/NewsApp',
+  'schmelto/100-days-of-code',
+  'schmelto/NewsApp',
   'schmelto/Portfolio',
-  // 'schmelto/ImpactHackathon',
-  // 'schmelto/schmelto',
+  'schmelto/ImpactHackathon',
+  'schmelto/schmelto',
   'schmelto/abap',
 ];
 
@@ -80,7 +80,9 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
     }
 
     label_issues.forEach((issue) => {
-      githubissues.innerHTML += createIssueCard(issue);
+      if (!issue.pull_request) {
+        githubissues.innerHTML += createIssueCard(issue);
+      }
     });
     githublabels.querySelectorAll('span').forEach((label) => {
       label.classList.remove('active');
