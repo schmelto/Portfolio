@@ -60,9 +60,9 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
   });
 
   all_issues.forEach((issue) => {
-      if (!issue.pull_request) {
-    githubissues.innerHTML += createIssueCard(issue);
-      }
+    if (!issue.pull_request) {
+      githubissues.innerHTML += createIssueCard(issue);
+    }
   });
 
   // when click on label show only issues with that label and hightlight label
@@ -86,13 +86,7 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
       label.classList.remove('active');
     });
     e.target.classList.add('active');
-
-    
   });
-
-
-
-
 });
 
 function createIssueCard(issue) {
