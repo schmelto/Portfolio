@@ -1,31 +1,66 @@
 let githubprojects = [
-  'schmelto/100-days-of-code',
-  'schmelto/NewsApp',
+  // 'schmelto/100-days-of-code',
+  // 'schmelto/NewsApp',
   'schmelto/Portfolio',
-  'schmelto/ImpactHackathon',
-  'schmelto/schmelto',
+  // 'schmelto/ImpactHackathon',
+  // 'schmelto/schmelto',
   'schmelto/abap',
 ];
 
+var githubissues = document.getElementById('githubissues');
+// var githublabels = document.getElementById('githublabels');
+
+// get issues as promis
+function getIssues(project) {
+  return new Promise((resolve, reject) => {
+    fetch(`https://api.github.com/repos/${project}/issues`)
+      .then(response => response.json())
+      .then(issues => {
+        resolve(issues);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+}
+
+let all_issues = [];
+let all_labels = [];
 githubprojects.forEach((project) => {
-  getprojectissues(project);
+  getIssues(project).then((issues) => {
+    // push all issues to array
+    all_issues.push(...issues);
+    // get all labels
+    issues.forEach((issue) => {
+      all_labels.push(...issue.labels);
+    });
+  });
 });
 
-var githubissues = document.getElementById('githubissues');
-
-function getprojectissues(project) {
-  fetch(`https://api.github.com/repos/${project}/issues`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((issues) => {
-      issues.forEach((issue) => {
-        if (!issue.pull_request) {
-          githubissues.innerHTML += createIssueCard(issue);
-        }
-      });
-    });
-}
+// await promis and create html
+Promise.all(githubprojects.map(getIssues)).then(() => {
+  all_issues.forEach((issue) => {
+    githubissues.innerHTML += createIssueCard(issue);
+  });
+  // // create labels
+  // all_labels.forEach((label) => {
+  //   // only if not already in list
+  //   if (
+  //     !githublabels.querySelector(
+  //       `span[style="background-color: #${label.color}; color: ${invertColor(
+  //         label.color,
+  //         true
+  //       )}; margin-right: 5px"]`
+  //     )
+  //   ) {
+  //     githublabels.innerHTML += `<span class="badge" style="background-color: #${
+  //       label.color
+  //     }; color: ${invertColor(label.color, true)}; margin-right: 5px">${
+  //       label.name
+  //     }</span>`;
+  //   }
+  // });
+});
 
 function createIssueCard(issue) {
   let labelstring = addLabels(issue.labels);
