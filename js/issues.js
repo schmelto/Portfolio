@@ -14,11 +14,11 @@ var githubissues = document.getElementById('githubissues');
 function getIssues(project) {
   return new Promise((resolve, reject) => {
     fetch(`https://api.github.com/repos/${project}/issues`)
-      .then(response => response.json())
-      .then(issues => {
+      .then((response) => response.json())
+      .then((issues) => {
         resolve(issues);
       })
-      .catch(err => {
+      .catch((err) => {
         reject(err);
       });
   });
