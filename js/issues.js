@@ -7,25 +7,89 @@ let githubprojects = [
   'schmelto/abap',
 ];
 
+var githubissues = document.getElementById('githubissues');
+var githublabels = document.getElementById('githublabels');
+
+// get issues as promis
+function getIssues(project) {
+  return new Promise((resolve, reject) => {
+    fetch(`https://api.github.com/repos/${project}/issues`)
+      .then((response) => response.json())
+      .then((issues) => {
+        resolve(issues);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+}
+
+let all_issues = [];
+let all_labels = [];
+
 githubprojects.forEach((project) => {
-  getprojectissues(project);
+  getIssues(project).then((issues) => {
+    // push all issues to array
+    all_issues.push(...issues);
+    // get all labels
+    issues.forEach((issue) => {
+      all_labels.push(...issue.labels);
+    });
+  });
 });
 
-var githubissues = document.getElementById('githubissues');
+// await promis and create html
+Promise.all(githubprojects.map(getIssues)).then(() => {
+  // create labels
+  all_labels.forEach((label) => {
+    // only if not already in list
+    if (
+      !githublabels.querySelector(
+        `span[style="background-color: #${label.color}; color: ${invertColor(
+          label.color,
+          true
+        )}; margin-right: 5px"]`
+      )
+    ) {
+      githublabels.innerHTML += `<span class="badge" style="background-color: #${
+        label.color
+      }; color: ${invertColor(label.color, true)}; margin-right: 5px">${
+        label.name
+      }</span>`;
+    }
+  });
 
-function getprojectissues(project) {
-  fetch(`https://api.github.com/repos/${project}/issues`)
-    .then((response) => {
-      return response.json();
-    })
-    .then((issues) => {
-      issues.forEach((issue) => {
-        if (!issue.pull_request) {
-          githubissues.innerHTML += createIssueCard(issue);
-        }
+  all_issues.forEach((issue) => {
+    if (!issue.pull_request) {
+      githubissues.innerHTML += createIssueCard(issue);
+    }
+  });
+
+  // when click on label show only issues with that label and hightlight label
+  githublabels.addEventListener('click', (e) => {
+    let label = e.target.innerText;
+    let label_issues = all_issues.filter((issue) => {
+      return issue.labels.some((label_issue) => {
+        return label_issue.name === label;
       });
     });
-}
+    githubissues.innerHTML = '';
+    // if no label is selected show all issues
+    if (label_issues.length === 0) {
+      label_issues = all_issues;
+    }
+
+    label_issues.forEach((issue) => {
+      if (!issue.pull_request) {
+        githubissues.innerHTML += createIssueCard(issue);
+      }
+    });
+    githublabels.querySelectorAll('span').forEach((label) => {
+      label.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  });
+});
 
 function createIssueCard(issue) {
   let labelstring = addLabels(issue.labels);
