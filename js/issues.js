@@ -68,26 +68,29 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
   // when click on label show only issues with that label and hightlight label
   githublabels.addEventListener('click', (e) => {
     let label = e.target.innerText;
-    let label_issues = all_issues.filter((issue) => {
-      return issue.labels.some((label_issue) => {
-        return label_issue.name === label;
+    if (!(label.startsWith('all') && label.length >= 4)) {
+      // to prevent no selection of label
+      let label_issues = all_issues.filter((issue) => {
+        return issue.labels.some((label_issue) => {
+          return label_issue.name === label;
+        });
       });
-    });
-    githubissues.innerHTML = '';
-    // if no label is selected show all issues
-    if (label_issues.length === 0) {
-      label_issues = all_issues;
-    }
-
-    label_issues.forEach((issue) => {
-      if (!issue.pull_request) {
-        githubissues.innerHTML += createIssueCard(issue);
+      githubissues.innerHTML = '';
+      // if label "all" is clicked show all issues
+      if (label === 'all') {
+        label_issues = all_issues;
       }
-    });
-    githublabels.querySelectorAll('span').forEach((label) => {
-      label.classList.remove('active');
-    });
-    e.target.classList.add('active');
+
+      label_issues.forEach((issue) => {
+        if (!issue.pull_request) {
+          githubissues.innerHTML += createIssueCard(issue);
+        }
+      });
+      githublabels.querySelectorAll('span').forEach((label) => {
+        label.classList.remove('active');
+      });
+      e.target.classList.add('active');
+    }
   });
 });
 
