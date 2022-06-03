@@ -74,8 +74,8 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
       });
     });
     githubissues.innerHTML = '';
-    // if no label is selected show all issues
-    if (label_issues.length === 0) {
+    // if label "all" is clicked show all issues
+    if (label === 'all') {
       label_issues = all_issues;
     }
 
