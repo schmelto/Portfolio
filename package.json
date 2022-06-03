@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/schmelto/Portfolio.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "schmelto",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/schmelto/Portfolio/issues"
   },
