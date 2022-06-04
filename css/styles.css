@@ -219,7 +219,7 @@ a.nav-link:hover {
   .box {
     display: block;
     height: 22rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 
@@ -231,7 +231,7 @@ a.nav-link:hover {
   .box {
     display: block;
     height: 22rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 
@@ -243,7 +243,7 @@ a.nav-link:hover {
   .box {
     display: block;
     height: 22rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 
@@ -318,7 +318,7 @@ a.nav-link:hover {
 
 @media (max-width: 767px) {
   .timeline .event:before {
-    left: 0px;
+    left: 0;
     text-align: left;
   }
 }
