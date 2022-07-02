@@ -25,7 +25,15 @@ function getIssues(project) {
 }
 
 let all_issues = [];
-let all_labels = [];
+// add label array with one all label
+
+let all_labels = [
+  {
+    id: 1,
+    color: '2E2A2A',
+    name: 'all',
+  },
+];
 
 githubprojects.forEach((project) => {
   getIssues(project).then((issues) => {
@@ -33,6 +41,7 @@ githubprojects.forEach((project) => {
     all_issues.push(...issues);
     // get all labels
     issues.forEach((issue) => {
+      console.log(issue.labels);
       all_labels.push(...issue.labels);
     });
   });
@@ -59,6 +68,16 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
     }
   });
 
+  // initialy set label with inner html"all" to actice
+  githublabels
+    .querySelector(
+      `span[style="background-color: #2E2A2A; color: ${invertColor(
+        '2E2A2A',
+        true
+      )}; margin-right: 5px"]`
+    )
+    .classList.add('active');
+
   all_issues.forEach((issue) => {
     if (!issue.pull_request) {
       githubissues.innerHTML += createIssueCard(issue);
@@ -75,7 +94,7 @@ Promise.all(githubprojects.map(getIssues)).then(() => {
     });
     githubissues.innerHTML = '';
     // if no label is selected show all issues
-    if (label_issues.length === 0) {
+    if (label_issues.length === 0 || label_issues[0].name == 'all') {
       label_issues = all_issues;
     }
 
