@@ -1,3 +1,11 @@
+:root{
+  --type-tom : 0;
+  --type-developer: -5.85rem;
+  --type-consultant : -11.75rem;
+  --type-coder : -17.6rem;
+}
+
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -75,6 +83,16 @@ a.nav-link:hover {
   .CaiApp .CaiAppInput {
     position: fixed !important;
   }
+
+  .carousel .change_outer .change_inner {
+    --type-developer: -5rem;
+    --type-consultant : -10rem;
+    --type-coder : -15rem;
+  }
+
+  .carousel .change_outer .change_inner h1 {
+    font-size: 3.7rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -147,6 +165,10 @@ a.nav-link:hover {
   animation: rotate 8s ease-in-out infinite;
 }
 
+.carousel .change_outer .change_inner .element {
+  font-weight: bold;
+}
+
 #typewriter:after {
   content: '|';
   animation: blink 500ms linear infinite alternate;
@@ -159,15 +181,15 @@ a.nav-link:hover {
   }
   25%,
   45% {
-    transform: translateY(-5.85rem);
+    transform: translateY(var(--type-developer));
   }
   50%,
   70% {
-    transform: translateY(-11.75rem);
+    transform: translateY(var(--type-consultant));
   }
   75%,
   95% {
-    transform: translateY(-17.6rem);
+    transform: translateY(var(--type-coder));
   }
   100% {
     transform: translateY(-23.5rem);
