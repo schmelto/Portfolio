@@ -1,10 +1,9 @@
-:root{
-  --type-tom : 0;
+:root {
+  --type-tom: 0;
   --type-developer: -5.85rem;
-  --type-consultant : -11.75rem;
-  --type-coder : -17.6rem;
+  --type-consultant: -11.75rem;
+  --type-coder: -17.6rem;
 }
-
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -86,8 +85,8 @@ a.nav-link:hover {
 
   .carousel .change_outer .change_inner {
     --type-developer: -5rem;
-    --type-consultant : -10rem;
-    --type-coder : -15rem;
+    --type-consultant: -10rem;
+    --type-coder: -15rem;
   }
 
   .carousel .change_outer .change_inner h1 {
