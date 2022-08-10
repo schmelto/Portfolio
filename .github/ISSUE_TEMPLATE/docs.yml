@@ -1,7 +1,7 @@
 name: Documentation
 description: Things about the documentation
-title: '[Docs]: '
-labels: ['📄 aspect: text']
+title: "[Docs]: "
+labels: ["📄 aspect: text"]
 body:
   - type: markdown
     attributes:
