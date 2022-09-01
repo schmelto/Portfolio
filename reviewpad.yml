@@ -26,24 +26,19 @@ workflows:
       - rule: $size() <= 9
         extra-actions:
           - $addLabel("size/XS")
-          - $removeLabel("size/S", "size/M", "size/L", "size/XL", "size/XXL")
+          - $removeLabel("size/S")
       - rule: $size() >= 10 && $size() <= 29
         extra-actions:
           - $addLabel("size/S")
-          - $removeLabel("size/XS", "size/M", "size/L", "size/XL", "size/XXL")
       - rule: $size() >= 20 && $size() <= 99
         extra-actions:
           - $addLabel("size/M")
-          - $removeLabel("size/XS", "size/S", "size/L", "size/XL", "size/XXL")
       - rule: $size() >= 100 && $size() <= 499
         extra-actions:
           - $addLabel("size/L")
-          - $removeLabel("size/XS", "size/S", "size/M", "size/XL", "size/XXL")
       - rule: $size() >= 500 && $size() <= 999
         extra-actions:
           - $addLabel("size/XL")
-          - $removeLabel("size/XS", "size/S", "size/M", "size/L", "size/XXL")
       - rule: $size() >= 1000
         extra-actions:
           - $addLabel("size/XXL")
-          - $removeLabel("size/XS", "size/S", "size/M", "size/L", "size/XL")
