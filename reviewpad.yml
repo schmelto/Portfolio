@@ -26,46 +26,18 @@ workflows:
       - rule: $size() <= 9
         extra-actions:
           - $addLabel("size/XS")
-      - rule: $size() => 10 && $size() <= 29
+      - rule: $size() >= 10 && $size() <= 29
         extra-actions:
           - $addLabel("size/S")
-      - rule: $size() => 20 && $size() <= 99
+      - rule: $size() >= 20 && $size() <= 99
         extra-actions:
           - $addLabel("size/M")
-      - rule: $size() => 100 && $size() <= 499
+      - rule: $size() >= 100 && $size() <= 499
         extra-actions:
           - $addLabel("size/L")
-      - rule: $size() => 500 && $size() <= 999
+      - rule: $size() >= 500 && $size() <= 999
         extra-actions:
           - $addLabel("size/XL")
       - rule: $size() >= 1000
         extra-actions:
           - $addLabel("size/XXL")
-
-  - name: empty-description
-    on:
-      - 'issue'
-      - 'pull_request'
-    always-run: true
-    if:
-      - $description() == ""
-    then:
-      - '$error("The description is empty. Please add more information!")'
-
-  - name: first-time-issue-contributor
-    on:
-      - 'issue'
-    always-run: true
-    if:
-      - rule: $issueCountBy($author(), "all") == 1
-        extra-actions:
-          - '$commentOnce($sprintf("Welcome @%v! Thank you so much for your first issue!", [$author()]))'
-
-  - name: first-time-pr-contributor
-    on:
-      - 'pull_request'
-    always-run: true
-    if:
-      - rule: $pullRequestCountBy($author(), "all") == 1
-        extra-actions:
-          - '$commentOnce($sprintf("Welcome @%v! Thank you so much for your first pull request!", [$author()]))'
