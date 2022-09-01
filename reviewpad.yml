@@ -5,7 +5,7 @@ labels:
     color: '5D9801'
     description: 'Denotes a change 0-9 lines'
   size/S:
-    color: '#5D9801'
+    color: '5D9801'
     description: 'Denotes a change 10-29 lines'
   size/M:
     color: '7F7203'
