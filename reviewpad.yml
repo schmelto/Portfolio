@@ -2,23 +2,23 @@ api-version: reviewpad.com/v3.x
 
 labels:
   size/xs:
-    color: "5D9801"
-    description: "Denotes a change 0-9 lines"
+    color: '5D9801'
+    description: 'Denotes a change 0-9 lines'
   size/S:
-    color: "#5D9801"
-    description: "Denotes a change 10-29 lines"
+    color: '#5D9801'
+    description: 'Denotes a change 10-29 lines'
   size/M:
-    color: "7F7203"
-    description: "Denotes a change 30-99 lines"
+    color: '7F7203'
+    description: 'Denotes a change 30-99 lines'
   size/L:
-    color: "A14C05"
-    description: "Denotes a change 100-499 lines"
+    color: 'A14C05'
+    description: 'Denotes a change 100-499 lines'
   size/XL:
-    color: "C32607"
-    description: "Denotes a change 500-999 lines"
+    color: 'C32607'
+    description: 'Denotes a change 500-999 lines'
   size/XXL:
-    color: "E50009"
-    description: "Denotes a change 1000+ lines"
+    color: 'E50009'
+    description: 'Denotes a change 1000+ lines'
 
 workflows:
   - name: label-pull-request-with-size
@@ -44,17 +44,17 @@ workflows:
 
   - name: empty-description
     on:
-      - "issue"
-      - "pull_request"
+      - 'issue'
+      - 'pull_request'
     always-run: true
     if:
       - $description() == ""
-    then: 
+    then:
       - '$error("The description is empty. Please add more information!")'
 
   - name: first-time-issue-contributor
     on:
-      - "issue"
+      - 'issue'
     always-run: true
     if:
       - rule: $issueCountBy($author(), "all") == 1
@@ -63,7 +63,7 @@ workflows:
 
   - name: first-time-pr-contributor
     on:
-      - "pull_request"
+      - 'pull_request'
     always-run: true
     if:
       - rule: $pullRequestCountBy($author(), "all") == 1
