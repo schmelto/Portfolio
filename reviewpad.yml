@@ -71,3 +71,40 @@ workflows:
           - $removeLabel("size/M")
           - $removeLabel("size/L")
           - $removeLabel("size/XL")
+
+  - name: pull-request-count
+    always-run: true
+    if:
+      - rule: $pullRequestCountBy($author(), "all") == 1
+        extra-actions:
+          - '$commentOnce($sprintf("Welcome @%v! Thank you so much for your first pull request!", [$author()]))'
+
+      - rule: $pullRequestCountBy($author(), "all") == 2
+        extra-actions:
+          - $info("Thanks for your second pull request!")
+      
+      - rule: $pullRequestCountBy($author(), "all") == 5
+        extra-actions:
+          - $info("Thanks for your fifth pull request!")
+
+      - rule: $pullRequestCountBy($author(), "all") == 10
+        extra-actions:
+          - $info("Thanks for your tenth pull request!")
+
+ - name: waiting-for-reviewers
+    always-run: true
+    if:
+      - rule: $reviewers() == []
+        extra-actions:
+          - '$info("A maintainer will review your pull request soon!")'
+          - '$addLabel("waiting-for-reviewers")'
+      - rule: $reviewers() != []
+        extra-actions:
+          - '$removeLabel("waiting-for-reviewers")'
+
+- name: add-label-for-documentation
+    always-run: true
+    if:
+      - rule: $hasFilePattern("**.md")
+    then:
+      - '$addLabel("documentation")'
