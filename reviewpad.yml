@@ -19,7 +19,7 @@ labels:
   size/XXL:
     color: 'E50009'
     description: 'Denotes a change 1000+ lines'
-  waiting-for-review:
+  '🔍 pull: waiting for review':
     color: 'D3D3D3'
     description: 'Denotes a change that is waiting for review'
 
@@ -94,21 +94,45 @@ workflows:
         extra-actions:
           - $commentOnce("Thanks for your tenth pull request!")
 
-  - name: waiting-for-reviewers
+  - name: waiting-for-review
     always-run: true
     if:
       - rule: $reviewers() == []
         extra-actions:
           - '$commentOnce("A maintainer will review your pull request soon!")'
-          - '$addLabel("waiting-for-reviewers")'
+          - '$addLabel("🔍 pull: waiting for review")'
 
-  - name: waiting-for-review
+  - name: waiting-for-review-remove
     always-run: true
     if:
       - rule: $reviewers() != []
         extra-actions:
-          - '$commentOnce("A maintainer will review your pull request soon!")'
-          - '$removeLabel("waiting-for-review")'
+          - '$removeLabel("🔍 pull: waiting for review")'
+
+  - name: is-draft
+    always-run: true
+    if:
+      - rule: $isDraft()
+        extra-actions:
+          - '$info("This pull request is marked as draft. Please mark it as ready for review when you are done.")'
+          - '$addLabel("⚒️ pull: work in progress")'
+    else:
+      - rule: !$isDraft()
+        extra-actions:
+          - '$removeLabel("⚒️ pull: work in progress")'
+
+  - name: has-linked-issue
+    always-run: true
+    if:
+      - rule: $hasLinkedIssue()
+        extra-actions:
+          - '$info("This pull request is linked to an issue. Please make sure to close the issue when this pull request is merged.")'
+          - '$info("You can use the following keywords in the pull request description to close the issue automatically: close, closes, closed, fix, fixes, fixed, resolve, resolves, resolved (e.g. closes #issue-number)")'
+          - '$addLabel("🔗 pull: linked issue")'
+    else:
+      - rule: !$hasLinkedIssue()
+        extra-actions:
+          - '$removeLabel("🔗 pull: linked issue")'
 
   - name: add-label-for-documentation
     always-run: true
@@ -116,3 +140,10 @@ workflows:
       - rule: $hasFilePattern("**.md")
         extra-actions:
           - '$addLabel("📄 aspect: text")'
+
+  - name: add-label-for-dependency
+    always-run: true
+    if:
+      - rule: $hasFilePattern("package.json")
+        extra-actions:
+          - '$addLabel("📦 aspect: dependencies")'
