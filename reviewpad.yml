@@ -78,3 +78,10 @@ workflows:
       - rule: $hasFileExtensions([".md"])
         extra-actions:
           - $addLabel("documentation")
+
+  - name: find-git-conflicts
+  always-run: true
+    if:
+      - rule: $hasGitConflicts()
+    then:
+      - $addLabel("has-conflicts")
