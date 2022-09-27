@@ -19,9 +19,6 @@ labels:
   size/XXL:
     color: 'E50009'
     description: 'Denotes a change 1000+ lines'
-  '🔍 pull: waiting for review':
-    color: 'D3D3D3'
-    description: 'Denotes a change that is waiting for review'
 
 rules:
   - name: hasLinkedIssues
