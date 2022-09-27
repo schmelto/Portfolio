@@ -73,6 +73,7 @@ workflows:
           - $removeLabel("size/XL")
 
   - name: label-pull-request-with-docs
+    always-run: true
     if:
       - rule: $hasFileExtensions([".md"])
         extra-actions:
