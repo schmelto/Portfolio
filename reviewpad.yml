@@ -77,4 +77,4 @@ workflows:
     if:
       - rule: $hasFileExtensions([".md"])
         extra-actions:
-          - $addLabel("documentation")
+          - $addLabel("📄 aspect: text")
