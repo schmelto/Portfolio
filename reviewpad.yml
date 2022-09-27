@@ -19,6 +19,9 @@ labels:
   size/XXL:
     color: 'E50009'
     description: 'Denotes a change 1000+ lines'
+  waiting-for-review:
+    color: 'D3D3D3'
+    description: 'Denotes a change that is waiting for review'
 
 workflows:
   - name: label-pull-request-with-size
@@ -96,12 +99,16 @@ workflows:
     if:
       - rule: $reviewers() == []
         extra-actions:
-          - '$info("A maintainer will review your pull request soon!")'
+          - '$commentOnce("A maintainer will review your pull request soon!")'
           - '$addLabel("waiting-for-reviewers")'
+
+  - name: waiting-for-review
+    always-run: true
+    if:
       - rule: $reviewers() != []
         extra-actions:
-          - '$info("Your pull request is being reviewed by %v", [$reviewers()])'
-          - '$removeLabel("waiting-for-reviewers")'
+          - '$commentOnce("A maintainer will review your pull request soon!")'
+          - '$removeLabel("waiting-for-review")'
 
   - name: add-label-for-documentation
     always-run: true
