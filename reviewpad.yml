@@ -86,9 +86,10 @@ workflows:
     then:
       - $addLabel("has-conflicts")
 
-  - name: has-linked-issue
+  - name: waiting-for-reviewers
     always-run: true
     if:
-      - rule: $hasLinkedIssue()
-    then:
-      - $addLabel("has-linked-issue")
+      - rule: $reviewers() == []
+        extra-actions:
+          - '$info("A maintainer will review your pull request soon!")'
+          - '$addLabel("waiting-for-reviewers")'
