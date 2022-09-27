@@ -20,16 +20,6 @@ labels:
     color: 'E50009'
     description: 'Denotes a change 1000+ lines'
 
-rules:
-  - name: changesPackageJson
-    kind: patch
-    description: checks if package.json is changed
-    spec: $hasFileName("package.json")
-  - name: documentationChanges
-    kind: patch
-    description: checks if documentation is changed
-    spec: $hasFileExtensions(".md")
-
 workflows:
   - name: label-pull-request-with-size
     if:
@@ -81,16 +71,3 @@ workflows:
           - $removeLabel("size/M")
           - $removeLabel("size/L")
           - $removeLabel("size/XL")
-
-  - name: label-pull-request-with-package-json
-    if:
-      - rule: $changesPackageJson()
-        extra-actions:
-          - $addLabel("package.json")
-
-  - name: label-pull-request-with-documentation
-    if:
-      - rule: $documentationChanges()
-        extra-actions:
-          - $addLabel("documentation")
-
