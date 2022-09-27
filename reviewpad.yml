@@ -85,3 +85,17 @@ workflows:
       - rule: $hasGitConflicts()
     then:
       - $addLabel("has-conflicts")
+
+  - name: has-linked-issue
+    always-run: true
+    if:
+      - rule: $hasLinkedIssue()
+    then:
+      - $addLabel("has-linked-issue")
+
+  - name: has-no-lined-issue
+    always-run: true
+    if:
+      - rule: $hasLinkedIssue() == false
+    then:
+      - $addLabel("has-no-linked-issue")
