@@ -71,3 +71,9 @@ workflows:
           - $removeLabel("size/M")
           - $removeLabel("size/L")
           - $removeLabel("size/XL")
+
+  - name: label-pull-request-with-docs
+    if:
+      - rule: $hasFileExtensions([".md"])
+        extra-actions:
+          - $addLabel("documentation")
