@@ -26,11 +26,6 @@ rules:
     description: Verifies if the pull request has linked issues
     spec: $hasLinkedIssues()
 
-  - name: isDraft
-    kind: patch
-    description: Verifies if is Draft
-    spec: $isDraft()
-
 workflows:
   - name: label-pull-request-with-size
     if:
