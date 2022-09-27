@@ -81,17 +81,17 @@ workflows:
 
       - rule: $pullRequestCountBy($author(), "all") == 2
         extra-actions:
-          - $info("Thanks for your second pull request!")
-      
+          - $commentOnce("Thanks for your second pull request!")
+
       - rule: $pullRequestCountBy($author(), "all") == 5
         extra-actions:
-          - $info("Thanks for your fifth pull request!")
+          - $commentOnce("Thanks for your fifth pull request!")
 
       - rule: $pullRequestCountBy($author(), "all") == 10
         extra-actions:
-          - $info("Thanks for your tenth pull request!")
+          - $commentOnce("Thanks for your tenth pull request!")
 
- - name: waiting-for-reviewers
+  - name: waiting-for-reviewers
     always-run: true
     if:
       - rule: $reviewers() == []
@@ -100,11 +100,12 @@ workflows:
           - '$addLabel("waiting-for-reviewers")'
       - rule: $reviewers() != []
         extra-actions:
+          - '$info("Your pull request is being reviewed by %v", [$reviewers()])'
           - '$removeLabel("waiting-for-reviewers")'
 
-- name: add-label-for-documentation
+  - name: add-label-for-documentation
     always-run: true
     if:
       - rule: $hasFilePattern("**.md")
-    then:
-      - '$addLabel("documentation")'
+        extra-actions:
+          - '$addLabel("documentation")'
