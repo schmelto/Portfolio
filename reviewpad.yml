@@ -21,10 +21,14 @@ labels:
     description: 'Denotes a change 1000+ lines'
 
 rules:
-  - name: hasLinkedIssues
+  - name: changesPackageJson
     kind: patch
-    description: Verifies if the pull request has linked issues
-    spec: $hasLinkedIssues()
+    description: checks if package.json is changed
+    spec: $hasFileName("package.json")
+  - name: documentationChanges
+    kind: patch
+    description: checks if documentation is changed
+    spec: $hasFileExtensions(".md")
 
 workflows:
   - name: label-pull-request-with-size
@@ -78,58 +82,15 @@ workflows:
           - $removeLabel("size/L")
           - $removeLabel("size/XL")
 
-  - name: pull-request-count
-    always-run: true
+  - name: label-pull-request-with-package-json
     if:
-      - rule: $pullRequestCountBy($author(), "all") == 1
+      - rule: $changesPackageJson()
         extra-actions:
-          - '$commentOnce($sprintf("Welcome @%v! Thank you so much for your first pull request!", [$author()]))'
+          - $addLabel("package.json")
 
-      - rule: $pullRequestCountBy($author(), "all") == 2
-        extra-actions:
-          - $commentOnce("Thanks for your second pull request!")
-
-      - rule: $pullRequestCountBy($author(), "all") == 5
-        extra-actions:
-          - $commentOnce("Thanks for your fifth pull request!")
-
-      - rule: $pullRequestCountBy($author(), "all") == 10
-        extra-actions:
-          - $commentOnce("Thanks for your tenth pull request!")
-
-  - name: waiting-for-review
-    always-run: true
+  - name: label-pull-request-with-documentation
     if:
-      - rule: $reviewers() == []
+      - rule: $documentationChanges()
         extra-actions:
-          - '$commentOnce("A maintainer will review your pull request soon!")'
-          - '$addLabel("🔍 pull: waiting for review")'
+          - $addLabel("documentation")
 
-  - name: waiting-for-review-remove
-    always-run: true
-    if:
-      - rule: $reviewers() != []
-        extra-actions:
-          - '$removeLabel("🔍 pull: waiting for review")'
-
-  - name: is-draft
-    always-run: true
-    if:
-      - rule: $isDraft()
-        extra-actions:
-          - '$info("This pull request is marked as draft. Please mark it as ready for review when you are done.")'
-          - '$addLabel("⚒️ pull: work in progress")'
-
-  - name: add-label-for-documentation
-    always-run: true
-    if:
-      - rule: $hasFilePattern("**.md")
-        extra-actions:
-          - '$addLabel("📄 aspect: text")'
-
-  - name: add-label-for-dependency
-    always-run: true
-    if:
-      - rule: $hasFilePattern("package.json")
-        extra-actions:
-          - '$addLabel("📦 aspect: dependencies")'
