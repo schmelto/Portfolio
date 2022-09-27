@@ -119,10 +119,6 @@ workflows:
         extra-actions:
           - '$info("This pull request is marked as draft. Please mark it as ready for review when you are done.")'
           - '$addLabel("⚒️ pull: work in progress")'
-    else:
-      - rule: !$isDraft()
-        extra-actions:
-          - '$removeLabel("⚒️ pull: work in progress")'
 
   - name: has-linked-issue
     always-run: true
@@ -132,10 +128,6 @@ workflows:
           - '$info("This pull request is linked to an issue. Please make sure to close the issue when this pull request is merged.")'
           - '$info("You can use the following keywords in the pull request description to close the issue automatically: close, closes, closed, fix, fixes, fixed, resolve, resolves, resolved (e.g. closes #issue-number)")'
           - '$addLabel("🔗 pull: linked issue")'
-    else:
-      - rule: !$hasLinkedIssue()
-        extra-actions:
-          - '$removeLabel("🔗 pull: linked issue")'
 
   - name: add-label-for-documentation
     always-run: true
