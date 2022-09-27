@@ -115,4 +115,4 @@ workflows:
     if:
       - rule: $hasFilePattern("**.md")
         extra-actions:
-          - '$addLabel("documentation")'
+          - '$addLabel("📄 aspect: text")'
