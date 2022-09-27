@@ -23,6 +23,18 @@ labels:
     color: 'D3D3D3'
     description: 'Denotes a change that is waiting for review'
 
+rules:
+  - name: hasLinkedIssues
+    kind: patch
+    description: Verifies if the pull request has linked issues
+    spec: $hasLinkedIssues()
+    
+  - name: isDraft
+    kind: patch
+    description: Verifies if is Draft
+    spec: $isDraft()
+
+
 workflows:
   - name: label-pull-request-with-size
     if:
@@ -147,3 +159,9 @@ workflows:
       - rule: $hasFilePattern("package.json")
         extra-actions:
           - '$addLabel("📦 aspect: dependencies")'
+
+  - name: label-pull-requests-with-git-conflicts
+    if:
+      - '$hasGitConflicts()'
+    then:
+      - '$addLabel("conflicts")'
