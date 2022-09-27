@@ -78,18 +78,3 @@ workflows:
       - rule: $hasFileExtensions([".md"])
         extra-actions:
           - $addLabel("documentation")
-
-  - name: find-git-conflicts
-  always-run: true
-    if:
-      - rule: $hasGitConflicts()
-    then:
-      - $addLabel("has-conflicts")
-
-  - name: waiting-for-reviewers
-    always-run: true
-    if:
-      - rule: $reviewers() == []
-        extra-actions:
-          - '$info("A maintainer will review your pull request soon!")'
-          - '$addLabel("waiting-for-reviewers")'
