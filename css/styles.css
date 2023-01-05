@@ -54,6 +54,10 @@ a.nav-link:hover {
   cursor: pointer;
 }
 
+.center {
+  text-align: center;
+}
+
 .padding-on-md {
   padding-top: 0;
 }
