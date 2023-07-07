@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.31.0",
+  "version": "1.32.0",
   "description": "My portfolio website",
   "main": "index.html",
   "scripts": {
@@ -23,13 +23,13 @@
   "homepage": "https://github.com/schmelto/Portfolio#readme",
   "dependencies": {
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.4.1"
+    "prettier": "^3.0.0"
   },
   "devDependencies": {
-    "cypress": "^8.6.0",
+    "cypress": "^12.17.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "eslint": "^7.32.0",
-    "husky": "^7.0.4"
+    "eslint": "^8.44.0",
+    "husky": "^8.0.3"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
