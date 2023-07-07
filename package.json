@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/schmelto/Portfolio#readme",
   "dependencies": {
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.4.1"
   },
   "devDependencies": {
