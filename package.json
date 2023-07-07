@@ -29,7 +29,7 @@
     "cypress": "^8.6.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint": "^8.44.0",
-    "husky": "^7.0.4"
+    "husky": "^8.0.3"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
