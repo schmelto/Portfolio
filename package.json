@@ -4,10 +4,7 @@
   "description": "My portfolio website",
   "main": "index.html",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
     "format": "prettier --write .",
-    "test": "npm run cypress:run",
     "start": "index.html",
     "prepare": "husky install"
   },
@@ -26,8 +23,6 @@
     "prettier": "^3.0.0"
   },
   "devDependencies": {
-    "cypress": "^12.17.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint": "^8.44.0",
     "husky": "^8.0.3"
   },
