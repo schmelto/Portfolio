@@ -5,7 +5,7 @@ function getVersionOfPortfolio() {
     })
     .then((release) => {
       document.getElementById(
-        'version'
+        'version',
       ).innerHTML = `- <a href="${release.html_url}" target="_blank" rel="noopener">${release.tag_name}</a>`;
     });
 }
