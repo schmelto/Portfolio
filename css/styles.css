@@ -35,8 +35,10 @@ h3 {
 }
 
 .navbar {
-  background-color: #f8f9fa;
-}
+    background-color: rgba(248, 249, 250, 0.7);
+    border-bottom: 2px solid rgb(248, 240, 240);
+  }
+  
 
 .navbar-nav {
   margin-left: auto;
@@ -421,9 +423,9 @@ a.nav-link:hover {
     color: #fff;
   }
   .navbar {
-    background-color: #303134;
-  }
-
+    background-color: rgba(48, 49, 52, 0.5);
+    border-bottom: 2px solid rgba(48, 39, 42, 0.7);
+}
   .timeline .event:after {
     background: #202124;
   }
