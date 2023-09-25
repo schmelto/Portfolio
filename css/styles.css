@@ -422,8 +422,7 @@ a.nav-link:hover {
     color: #fff;
   }
   .navbar {
-    background-color: rgba(48, 49, 52, 0.5);
-    border-bottom: 2px solid rgba(48, 39, 42, 0.7);
+    background-color: rgba(48, 49, 52, 0.9);
 }
   .timeline .event:after {
     background: #202124;
