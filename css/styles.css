@@ -35,10 +35,10 @@ h3 {
 }
 
 .navbar {
-    background-color: rgba(248, 249, 250, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
+  background-color: rgba(248, 249, 250, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
 
 .navbar-nav {
   margin-left: auto;
@@ -426,7 +426,7 @@ a.nav-link:hover {
     background-color: rgba(48, 49, 52, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-}
+  }
   .timeline .event:after {
     background: #202124;
   }
