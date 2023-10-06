@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.33.5",
+  "version": "1.37.0",
   "description": "My portfolio website",
   "main": "index.html",
   "scripts": {
@@ -23,7 +23,7 @@
     "prettier": "^3.0.3"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "eslint": "^8.50.0",
     "husky": "^8.0.3"
   },
   "cypress-cucumber-preprocessor": {
