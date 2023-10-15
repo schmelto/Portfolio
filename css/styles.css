@@ -64,31 +64,7 @@ a.nav-link:hover {
   padding-top: 0;
 }
 
-/* Chatbot */
-.RecastApp .RecastAppMessage .RecastAppCard--text,
-.RecastApp .RecastAppMessage .CaiAppCard--text,
-.CaiApp .CaiAppMessage .RecastAppCard--text,
-.CaiApp .CaiAppMessage .CaiAppCard--text {
-  color: black;
-}
-
 @media (max-width: 419px) {
-  .RecastApp .RecastAppChat.open,
-  .CaiApp .CaiAppChat.open {
-    height: 100%;
-    min-height: -webkit-fill-available;
-  }
-
-  .RecastApp .RecastAppLive,
-  .CaiApp .CaiAppLive {
-    height: 90vh !important;
-  }
-
-  .RecastApp .RecastAppInput,
-  .CaiApp .CaiAppInput {
-    position: fixed !important;
-  }
-
   .carousel .change_outer .change_inner {
     --type-developer: -5rem;
     --type-consultant: -10rem;
