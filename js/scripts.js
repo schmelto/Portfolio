@@ -91,17 +91,9 @@ let githubprojects = [
     icon: 'description',
   },
   {
-    name: 'schmelto/NewsApp',
-    icon: 'article',
-  },
-  {
     name: 'schmelto/Portfolio',
     icon: 'person',
-  },
-  {
-    name: 'schmelto/ImpactHackathon',
-    icon: 'home',
-  },
+  }
 ];
 
 githubprojects.forEach((project) => {
