@@ -93,7 +93,7 @@ let githubprojects = [
   {
     name: 'schmelto/Portfolio',
     icon: 'person',
-  }
+  },
 ];
 
 githubprojects.forEach((project) => {
