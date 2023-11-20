@@ -2,7 +2,7 @@ input {
   border: none;
   background: transparent;
   color: #fff;
-  outline: none;
+  outline-color: transparent;
 }
 
 .key {
