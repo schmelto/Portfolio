@@ -115,19 +115,6 @@ a.nav-link:hover {
   font-size: 1rem;
 }
 
-.highlight-red {
-  color: #ef5350;
-}
-.highlight-orange {
-  color: rgba(253, 149, 90, 0.8);
-}
-.highlight-pink {
-  color: blueviolet;
-}
-.highlight-blue {
-  color: #6ac4ff;
-}
-
 .carousel {
   width: 100%;
   font-size: 4.5rem;
@@ -370,14 +357,6 @@ a.nav-link:hover {
   columns: 2;
 }
 
-@media (max-width: 768px) {
-  .flex-col-2 {
-    width: 100%;
-    height: auto;
-    columns: 1;
-  }
-}
-
 .flex-card {
   width: 100%;
   overflow: hidden;
@@ -421,12 +400,15 @@ a.nav-link:hover {
   }
 }
 
-#contact {
-  margin-bottom: 32px;
+.highlight-red {
+  color: #ef5350;
 }
-
-/* Remove box shadow of chat icon */
-.RecastApp .RecastAppExpander,
-.CaiApp .CaiAppExpander {
-  box-shadow: none !important;
+.highlight-orange {
+  color: rgba(253, 149, 90, 0.8);
+}
+.highlight-pink {
+  color: blueviolet;
+}
+.highlight-blue {
+  color: #6ac4ff;
 }
