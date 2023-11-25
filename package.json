@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "format": "prettier --write .",
-    "start": "index.html",
-    "prepare": "husky install"
+    "start": "index.html"
   },
   "repository": {
     "type": "git",
@@ -23,8 +22,7 @@
     "prettier": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.54.0",
-    "husky": "^8.0.0"
+    "eslint": "^8.54.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
