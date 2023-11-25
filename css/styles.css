@@ -399,7 +399,7 @@ a.nav-link:hover {
     color: #fff;
   }
   .navbar {
-    background-color: rgba(48, 49, 52, 0.7);
+    background-color: rgb(51, 58, 66, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
