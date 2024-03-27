@@ -9,9 +9,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
+        # github token is required to push changes back to the repository
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
-          node-version: "latest"
+          # latest node version
+          node-version: '16'
       - run: npm ci
       - run: npm run format
       - name: Commit changes
