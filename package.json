@@ -22,7 +22,7 @@
     "prettier": "^3.2.5"
   },
   "devDependencies": {
-    "eslint": "^9.1.1"
+    "eslint": "^9.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
