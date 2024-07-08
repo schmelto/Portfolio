@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "eslint": "^9.6.0",
-    "globals": "^15.7.0"
+    "globals": "^15.8.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
