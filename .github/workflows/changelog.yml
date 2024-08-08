@@ -13,7 +13,7 @@ jobs:
 
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v4.1.1
+        uses: riPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.github_token }}
           output-file: 'false'
