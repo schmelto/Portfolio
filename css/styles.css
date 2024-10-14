@@ -83,7 +83,6 @@ a.nav-link:hover {
 }
 
 .card {
-  margin-bottom: 1rem;
   background-color: #f8f9fa;
 }
 
@@ -362,6 +361,15 @@ a.nav-link:hover {
   overflow: hidden;
   break-inside: avoid;
   padding: 0;
+  margin : 15px;
+  border : 1px solid grey; 
+  border-radius: 3px;
+  box-shadow: rgba(201, 198, 198, 0.24) 0px 3px 8px;
+}
+
+.flex-card:hover{
+  transform:translateY(-5px);
+  transition: transform 320ms ease-out 50ms; 
 }
 
 .card-text {
