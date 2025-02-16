@@ -362,7 +362,7 @@ a.nav-link:hover {
   break-inside: avoid;
   padding: 0;
 }
-.flex-card:hover{
+.flex-card:hover {
   transform: scale(0.98);
   transition: transform 0.5s;
 }
