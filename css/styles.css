@@ -134,16 +134,20 @@ a.nav-link:hover {
 }
 
 @keyframes rotate {
-  0%, 20% {
+  0%,
+  20% {
     transform: translateY(0);
   }
-  25%, 45% {
+  25%,
+  45% {
     transform: translateY(var(--type-developer));
   }
-  50%, 70% {
+  50%,
+  70% {
     transform: translateY(var(--type-consultant));
   }
-  75%, 95% {
+  75%,
+  95% {
     transform: translateY(var(--type-coder));
   }
   100% {
