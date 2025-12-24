@@ -20,7 +20,7 @@
   "dependencies": {
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-scope": "^9.0.0",
-    "prettier": "^3.7.3"
+    "prettier": "^3.7.4"
   },
   "devDependencies": {
     "eslint": "^9.39.2",
