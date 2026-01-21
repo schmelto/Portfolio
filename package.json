@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/schmelto/Portfolio#readme",
   "dependencies": {
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-scope": "^9.1.0",
     "prettier": "^3.7.4"
   },
