@@ -1,3 +1,7 @@
+> [!NOTE]
+> This repository is archived and no longer actively maintained.  
+> It is kept for reference and historical purposes only.
+
 # :man_technologist: Portfolio Website
 
 This is my custom portfolio website built using _HTML_, _CSS_, and _JavaScript_.
